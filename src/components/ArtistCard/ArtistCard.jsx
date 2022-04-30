@@ -1,7 +1,5 @@
 
 import React from 'react';
-import { Link } from 'react-router-dom';
-// import artistImg from '../../images/latitude/Artist_01.jpg'
 import useStyles from './styles';
 
 const ArtistCard = ({ artistName, position, country, DBimg}) => {

@@ -1,11 +1,4 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
-
-import instagram from '../../images/interface/instagram-icon.svg';
-import facebook from '../../images/interface/facebook-icon.svg';
-import youtube from '../../images/interface/youtube-icon.svg';
-import tripadvisor from '../../images/interface/tripadvisor-licon.svg';
-
 
 import useStyles from './styles';
 import FooterInfo from '../FooterInfo';

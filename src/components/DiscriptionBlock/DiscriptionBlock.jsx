@@ -1,13 +1,8 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
-
-import SubscribeHere from '../../images/subscribe-here.jpg';
-
 
 import useStyles from './styles';
 
 const DiscriptionBlock = ({DBimg, title, text, buttonText}) => {
-  console.log(DBimg, 9999)
   const classNames = useStyles({ });
   return (
     <div className={classNames.subscribeSection}>

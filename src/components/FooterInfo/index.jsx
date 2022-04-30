@@ -1,5 +1,4 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 
 import instagram from '../../images/interface/instagram-icon.svg';
 import facebook from '../../images/interface/facebook-icon.svg';
@@ -27,7 +26,7 @@ const FooterInfo = ({title, tel, mail, adress,web,link, socialLink}) => {
           </ul>
           <h3 className={classNames.title}>SOCIAL MEDIA</h3>
           <ul className={classNames.listImg}>
-            {/* <li className={classNames.img}><Link to={socialLink} targer='_blank'><img src={instagram} alt="icon" /></Link></li> */}
+          <li className={classNames.img}><img src={instagram} alt="icon" /></li>
             <li className={classNames.img}><img src={facebook} alt="icon" /></li>
             <li className={classNames.img}><img src={youtube} alt="icon" /></li>
             <li className={classNames.img}><img src={tripadvisor} alt="icon" /></li>

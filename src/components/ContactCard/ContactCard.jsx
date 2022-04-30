@@ -1,5 +1,4 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 
 import instagram from '../../images/instagram1.svg'
 import facebook from '../../images/facebook1.svg'
@@ -57,22 +56,22 @@ const ContactCard = ({title, time, address, floor, tel, email, emailLink, social
       </div>
       <div className={classNames.mail}>
         <p><strong>For general inquiries</strong></p>
-        <a href="mailto: {email}" target='_blank' className={classNames.maillink}>{email}</a>
+        <a href="mailto: {email}" target='_blank' rel="noreferrer" className={classNames.maillink}>{email}</a>
       </div>
       <div className={classNames.contacts}>
         <p><strong>Social Media</strong></p>
         <ul className={classNames.sociallist}>
           {social?.instagram &&
-            <li><a className={classNames.img} href="" target='_blank'><img src={instagram} alt="" /></a></li>
+            <li><a className={classNames.img} href="www.instagram.com" target='_blank' rel="noreferrer"><img src={instagram} alt="" /></a></li>
           }  
           {social?.facebook && 
-            <li><a className={classNames.img} href="" target='_blank'><img src={facebook} alt="" /></a></li>
+            <li><a className={classNames.img} href="www.facebook.com" target='_blank' rel="noreferrer"><img src={facebook} alt="" /></a></li>
           }
           {social?.youtube &&
-            <li><a className={classNames.img} href="" target='_blank'><img src={youtube} alt="" /></a></li>
+            <li><a className={classNames.img} href="www.youtube.com" target='_blank' rel="noreferrer"><img src={youtube} alt="" /></a></li>
           }
           {social?.tripAdvisor &&
-            <li><a className={classNames.img} href="" target='_blank'><img src={tripAdvisor} alt="" /></a></li>
+            <li><a className={classNames.img} href="www.tripadvisor.com" target='_blank' rel="noreferrer"><img src={tripAdvisor} alt="" /></a></li>
           }
         </ul>
       </div>
