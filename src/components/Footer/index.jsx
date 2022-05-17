@@ -23,20 +23,21 @@ const Footer = ({contactRef}) => {
           title='THE BEACH'
           tel='Tel: +374 77 862 300'
           mail='Mail: thebeach@gmail.com'
-          adress='Ashtarak Highway 7 Yerevan, Armenia'
+          // adress='Ashtarak Highway 7 Yerevan, Armenia'
           link='Apply for job'
         />
         <div className={classNames.mooreInfo}>
           <FooterInfo
-            title='THE BEACH'
-            tel='Tel: +374 77 862 300'
-            mail='Mail: thebeach@gmail.com'
-            adress='Ashtarak Highway 7 Yerevan, Armenia'
-            link='Apply for job'
+            title='YBAF'
+            tel='Tel: +374 44 204434'
+            mail='Mail: latitude@yerevanbiennial.org'
+            web='Web: https://ybaf.am/support-us/'
+            // adress='Ashtarak Highway 7 Yerevan, Armenia'
+            link='Membership request'
             // socialLink={}
           />
           <button className={classNames.footerButton} onClick={scrollToTopBtn}>
-              Moore Info
+              More Info
           </button>
         </div>
       </footer>

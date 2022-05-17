@@ -30,7 +30,7 @@ const useStyles = makeStyles((theme) => ({
     transform: 'translateX(-50%)',
   },
   button: {
-    padding: '25px 30px',
+    padding: '17px 20px',
     cursor: 'pointer',
     outline: 'none',
     background: 'none',
@@ -57,6 +57,7 @@ const useStyles = makeStyles((theme) => ({
   },
 
   linksHolder: {
+    padding:'0 40px',
     display: 'grid',
     gridTemplateColumns: '1fr 1fr',
     gap: '20px',
@@ -73,9 +74,9 @@ const useStyles = makeStyles((theme) => ({
       transform: 'scale(1.01)',
       opacity: '0.7',
     },
-    '&:last-child': {
-      gridColumn: '1 / -1',
-    },
+    // '&:last-child': {
+    //   gridColumn: '1 / -1',
+    // },
   },
   linksText: {
     fontSize: '36px',
@@ -89,6 +90,19 @@ const useStyles = makeStyles((theme) => ({
     display: 'flex',
     flexDirection: 'column',
     justifyContent: 'center',
+  },
+  shopContainer:{
+    width: '100%',
+  },
+  shopSection:{
+    display: 'grid',
+    gap: '80px',
+    gridTemplateColumns: '1fr 1fr 1fr',
+    padding:'0 65px',
+  },
+  buttonHolder:{
+    display:'flex',
+    justifyContent:'center',
   },
   subscribeSection: {
     width: '100%',
@@ -136,7 +150,13 @@ const useStyles = makeStyles((theme) => ({
     justifyContent: 'space-around',
     alignItems: 'center',
     marginBottom: '80px',
-  }
+  },
+  modal:{
+    position:'absolute',
+    display:'flex',
+    justifyContent:'center',
+    alignItems:'center',
+  },
 }));
 
 export default useStyles;

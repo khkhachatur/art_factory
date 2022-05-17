@@ -44,10 +44,18 @@ const useStyles = makeStyles((theme) => ({
     },
     sociallist:{
         display:'flex',
-        gap:'10px',
+        gap:'4px',
         listStyleType: 'none',
         padding:'0'
     },
+    socialImg:{
+        width:'80%',
+        height:'80%'
+    },
+    socialFacebookImg:{
+        width:'81%',
+        height:'82%'
+    }
 }));
 
 export default useStyles;

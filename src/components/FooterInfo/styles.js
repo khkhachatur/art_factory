@@ -25,8 +25,9 @@ const useStyles = makeStyles((theme) => ({
     fontSize:'14px',
     fontWeight:'500',
     '&:last-child': {
-      paddingTop:'10px',
-    },
+      marginTop: '10px',
+      color:'red'
+  }
   },
   listImg:{
     display:'flex',

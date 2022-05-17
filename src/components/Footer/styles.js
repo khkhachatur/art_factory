@@ -4,15 +4,12 @@ const useStyles = makeStyles((theme) => ({
   footerHolder: {
     background: 'linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), #003566;',
     width: '100%',
-    // position: 'absolute',
-    // bottom: '0',
-    // left:'0',
     display: 'flex',
   },
   footer: {
     padding:'0 250px',
     display:'flex',
-    gap:'150px'
+    gap:'100px'
   },
   info:{
     color:'#ffffff'

@@ -37,7 +37,7 @@ const useStyles = makeStyles((theme) => ({
     padding: '20px',
   },
   button: {
-    padding: '25px 30px',
+    padding: '17px 20px',
     cursor: 'pointer',
     outline: 'none',
     background: 'transparent',
@@ -90,7 +90,11 @@ const useStyles = makeStyles((theme) => ({
     display: 'grid',
     gap: '40px',
     gridTemplateColumns: '1fr 1fr 1fr 1fr 1fr'
-  }
+  },
+  buttonHolder:{
+    display:'flex',
+    justifyContent:'center',
+  },
 }));
 
 export default useStyles;

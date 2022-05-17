@@ -6,8 +6,9 @@ import classnames from 'classnames';
 import { events, artists } from '../../db/dataBase';
 
 import Title from '../../components/Title/Title';
-import CustomModal from '../../components/Modal/CustomModal';
+import Modal from '../../components/Modal/Modal';
 import EventCard from '../../components/EventCard/EventCard';
+import Navigation from '../../components/Navigation/Navigation';
 import ArtistCard from '../../components/ArtistCard/ArtistCard';
 import SeeAllButton from '../../components/SeeAllButton/SeeAllButton';
 import DiscriptionBlock from '../../components/DiscriptionBlock/DiscriptionBlock';
@@ -30,6 +31,7 @@ const Latitude = () => {
   return (
     <div className={classNames.container}>
       <div className={classNames.section}>
+      <Navigation navTo="Latitude" />
         <div
           className={classNames.mainImage}
           style={{
@@ -40,7 +42,7 @@ const Latitude = () => {
             <div className={classNames.buttonContainer}>
               <button className={classNames.button}>
                 <div className={classNames.aboutUsLink}>
-                <CustomModal
+                <Modal
                   title='About Latitude'
                   text='Founded in order to give space and support to Armenian artists—local and diasporic alike—Latitude emanates a spirited and youthful energy that is cultivated through innovation and collaboration. 
                   Our space is dedicated to the celebration of Armenian artists through international exhibitions, workshops, and educational programs.
@@ -85,7 +87,7 @@ const Latitude = () => {
             <li><img src={L4} alt="Img" /></li>
           </ul>
         </div>
-        <Title text={'Jbaf Artists'} />
+        <Title text={'YBAF Artists'} />
         <div className={classNames.artistsBlock}>
         {artists.map(
             (item) => 
@@ -96,10 +98,12 @@ const Latitude = () => {
                 country={item.country}
                 DBimg = {item.artistImg}
               />
-        )
-        }
-          
+              )
+            }
         </div>   
+        <div className={classNames.buttonHolder}>
+         <SeeAllButton link="/artists" />
+        </div>
         <div className={classNames.JbafSection}>
           <DiscriptionBlock
             title='Become An YBAF Artist'

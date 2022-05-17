@@ -18,7 +18,7 @@ const DiscriptionBlock = ({DBimg, title, text, buttonText}) => {
             </p>
             <button className={classNames.subscribeButton}>{buttonText}</button>
           </div>
-        </div>
+      </div>
   );
 };
 

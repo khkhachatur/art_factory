@@ -4,6 +4,7 @@ import { events } from '../../db/dataBase';
 
 import Title from '../../components/Title/Title';
 import EventCard from '../../components/EventCard/EventCard';
+import Navigation from '../../components/Navigation/Navigation';
 import SeeAllButton from '../../components/SeeAllButton/SeeAllButton';
 
 import useStyles from './styles';
@@ -15,11 +16,7 @@ const Events = () => {
   return (
     <div className={classNames.container}>
       <div className={classNames.section}>
-        <div className={classNames.nav}>
-          <p className={classNames.navText}>Home</p>
-          <p className={classNames.navText}>&rsaquo;</p>
-          <p className={classNames.navText}>Events</p>
-        </div>
+        <Navigation navTo="Events" />
         <Title text="Events happening this week" />
         <div className={classNames.weekly}>
           {events.map(

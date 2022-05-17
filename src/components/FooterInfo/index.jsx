@@ -9,7 +9,6 @@ import useStyles from './styles';
 
 const FooterInfo = ({title, tel, mail, adress,web,link, socialLink}) => {
 
-  console.log('title', title);
   const classNames = useStyles();
 
   return (

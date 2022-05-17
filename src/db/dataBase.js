@@ -1,6 +1,9 @@
 import Image from '../images/events/event-beach.jpg';
 import artistImg_01 from '../images/latitude/Artist_01.jpg'
 import artistImg_02 from '../images/latitude/Artist_02.jpg'
+import itemImg_01 from '../images/shop-items/shop-item1.jpg'
+import itemImg_02 from '../images/shop-items/shop-item2.jpg'
+import itemImg_03 from '../images/shop-items/shop-item3.jpg'
 export const events = [
   {
     id: 1,
@@ -114,18 +117,42 @@ export const artists = [
   },
 ];
 
+export const shopCard =[
+  {
+    id: 1,
+    creatorName: 'Gohar Sargsyan',
+    itemName:'Untitled',
+    year:'2009',
+    price:'3000 $',
+    itemImg: itemImg_01,
+  },
+  {
+    id: 2,
+    creatorName: 'Gohar Sargsyan',
+    itemName:'Untitled',
+    year:'2009',
+    price:'3000 $',
+    itemImg: itemImg_02,
+  },
+  {
+    id: 3,
+    creatorName: 'Gohar Sargsyan',
+    itemName:'Untitled',
+    year:'2009',
+    price:'3000 $',
+    itemImg: itemImg_03,
+  },
+]
+
 export const contactCard = [
   {
     id: 1,
     title: 'The Beach',
+    days: {
+      daysText1:'Mon-Sun',
+    },
     time: {
-      Mon: '17:00-01:00',
-      Tue: '17:00-01:00',
-      Wed: '17:00-01:00',
-      Thu: '17:00-01:00',
-      Fri: '17:00-01:00',
-      Sat: '17:00-01:00',
-      Sun: '17:00-01:00',
+      timeText1:'17:00-01:00',
     },
     address: 'Ashtarak Highway 7 Yerevan, Armenia',
     floor: 'Art Factory 5th Floor',
@@ -142,13 +169,8 @@ export const contactCard = [
     id: 2,
     title: 'Latitude',
     time: {
-      Mon: 'Close',
-      Tue: 'Close',
-      Wed: 'Close',
-      Thu: '14:00-19:00',
-      Fri: '14:00-19:00',
-      Sat: '14:00-19:00',
-      Sun: '14:00-19:00',
+      timeText1:'Close',
+      timeText2:'14:00-19:00',
     },
     address: 'Ashtarak Highway 7 Yerevan, Armenia',
     floor: 'Art Factory 1th Floor',
@@ -165,13 +187,8 @@ export const contactCard = [
     id: 3,
     title: 'A1',
     time: {
-      Mon: 'Close',
-      Tue: '11:00-20:00',
-      Wed: '11:00-20:00',
-      Thu: '11:00-20:00',
-      Fri: '11:00-20:00',
-      Sat: '11:00-20:00',
-      Sun: '11:00-20:00',
+      timeText1:'Close',
+      timeText2:'11:00-20:00',
     },
     address: 'Abovyan street 1 Yerevan, Armenia',
     floor: 'Second Floor',

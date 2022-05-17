@@ -7,10 +7,8 @@ import tripAdvisor from '../../images/tripadvisor1.svg'
 
 import useStyles from './styles';
 
-const ContactCard = ({title, time, address, floor, tel, email, emailLink, social}) => {
+const ContactCard = ({title, time, days, floor, email, social}) => {
   const classNames = useStyles({ });
-  console.log(social, 999)
-
   return (
     <div className={classNames.container}>
       <div className={classNames.title}>{title}</div>
@@ -18,41 +16,16 @@ const ContactCard = ({title, time, address, floor, tel, email, emailLink, social
       <ul className={classNames.list}>
         <li className={classNames.item}><strong>Working hours</strong></li>
         <li className={classNames.item}>
-          <p>Mon</p>
-          <p>{time.Mon}</p>
+          {/* <p>{days.daysText1}</p> */}
+          <p>{time.timeText1}</p>
+          <p>{time.timeText2}</p>
         </li>
         <li className={classNames.item}>
-          <p>Tue</p>
-          <p>{time.Tue}</p>
         </li>
-        <li className={classNames.item}>
-          <p>Wed</p>
-          <p>{time.Wed}</p>
-        </li>
-        <li className={classNames.item}>
-          <p>Thu</p>
-          <p>{time.Thu}</p>
-        </li>
-        <li className={classNames.item}>
-          <p>Fri</p>
-          <p>{time.Fri}</p>
-        </li>
-        <li className={classNames.item}>
-          <p>Sat</p>
-          <p>{time.Sat}</p>
-        </li>
-        <li className={classNames.item}>
-          <p>Sun</p>
-          <p>{time.Sun}</p>
-        </li>
-       
-
       </ul>
       <div className={classNames.contacts}>
         <p><strong>Contacts</strong></p>
-        <p className={classNames.contactItem}>{address}</p>
         <p className={classNames.contactItem}>{floor}</p>
-        <p className={classNames.contactItem}>{tel}</p>
       </div>
       <div className={classNames.mail}>
         <p><strong>For general inquiries</strong></p>
@@ -62,16 +35,16 @@ const ContactCard = ({title, time, address, floor, tel, email, emailLink, social
         <p><strong>Social Media</strong></p>
         <ul className={classNames.sociallist}>
           {social?.instagram &&
-            <li><a className={classNames.img} href="www.instagram.com" target='_blank' rel="noreferrer"><img src={instagram} alt="" /></a></li>
+            <li><a href="www.instagram.com" target='_blank' rel="noreferrer"><img className={classNames.socialImg}  src={instagram} alt="" /></a></li>
           }  
           {social?.facebook && 
-            <li><a className={classNames.img} href="www.facebook.com" target='_blank' rel="noreferrer"><img src={facebook} alt="" /></a></li>
+            <li><a href="www.facebook.com" target='_blank' rel="noreferrer"><img className={classNames.socialFacebookImg} src={facebook} alt="" /></a></li>
           }
           {social?.youtube &&
-            <li><a className={classNames.img} href="www.youtube.com" target='_blank' rel="noreferrer"><img src={youtube} alt="" /></a></li>
+            <li><a href="www.youtube.com" target='_blank' rel="noreferrer"><img className={classNames.socialImg}  src={youtube} alt="" /></a></li>
           }
           {social?.tripAdvisor &&
-            <li><a className={classNames.img} href="www.tripadvisor.com" target='_blank' rel="noreferrer"><img src={tripAdvisor} alt="" /></a></li>
+            <li><a href="www.tripadvisor.com" target='_blank' rel="noreferrer"><img className={classNames.socialImg} src={tripAdvisor} alt="" /></a></li>
           }
         </ul>
       </div>

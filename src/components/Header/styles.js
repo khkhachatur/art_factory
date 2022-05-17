@@ -7,6 +7,7 @@ const useStyles = makeStyles((theme) => ({
     width: '100%',
     position: 'fixed',
     zIndex: '1000',
+    marginBottom:'0',
     top: '0',
     display: 'flex',
     borderBottom: '1px solid rgba(196, 196, 196, 0.7)',
@@ -18,6 +19,29 @@ const useStyles = makeStyles((theme) => ({
     alignItems: 'center',
     width: '100%',
     maxWidth: '1200px',
+  },
+  menuHolder:{
+  },
+  dropDown:{
+    display:'flex',
+    flexDirection:'column',
+    listStyleType:'none',
+    position:'absolute',
+    padding:'60px 30px',
+    background:'#ffffff',
+    width: 'fit-content',
+    margin:'0',
+  },
+  link:{
+    margin:'7px 0',
+    color:'black',
+    fontSize:'18px',
+    fontWeight:'700',
+    transition: 'all 0.3s',
+    '&:hover':{
+      opacity:'0.7'
+    }
+
   },
   logo: {
     padding: '23px',

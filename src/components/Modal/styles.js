@@ -1,12 +1,28 @@
 import { makeStyles } from '@material-ui/core/styles';
 
 const useStyles = makeStyles((theme) => ({
+  modalBkg:{
+    
+    hight:'100%',
+    width:'100%',
+    background:'linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), rgba(0, 53, 102, 0.6);'
+  },
+  modalContainer:{
+    width:'700px',
+    background:'#white',
+    padding:'60px 50px'
+  },
+  close:{
+    display:'absolute',
+    left:'10px'
+  },
   title: {
+    display:'flex',
+    justifyContent:'center',
     fontSize:'24px',
     fontWeight:'300'
   },
   text: {
-    color:'red',
     fontSize:'14px',
     fontWeight:'400'
   },
