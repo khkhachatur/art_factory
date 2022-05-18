@@ -152,11 +152,9 @@ const useStyles = makeStyles((theme) => ({
     marginBottom: '80px',
   },
   modal:{
-    position:'absolute',
-    display:'flex',
-    justifyContent:'center',
-    alignItems:'center',
+
   },
 }));
 
 export default useStyles;
+ 

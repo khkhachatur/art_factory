@@ -16,11 +16,13 @@ const ContactCard = ({title, time, days, floor, email, social}) => {
       <ul className={classNames.list}>
         <li className={classNames.item}><strong>Working hours</strong></li>
         <li className={classNames.item}>
-          {/* <p>{days.daysText1}</p> */}
           <p>{time.timeText1}</p>
+        </li>
+        <li className={classNames.item}>
           <p>{time.timeText2}</p>
         </li>
         <li className={classNames.item}>
+          <p>{time.timeText3}</p>
         </li>
       </ul>
       <div className={classNames.contacts}>

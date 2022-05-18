@@ -35,7 +35,7 @@ const useStyles = makeStyles((theme) => ({
   },
   aboutContainer:{
     paddingTop:'80px'
-  },
+  }, 
   aboutText:{
     fontSize:'18px',
     fontWeight:'400'

@@ -7,9 +7,16 @@ const useStyles = makeStyles((theme) => ({
     gap: '14px',
   },
   navText: {
+    color:'#000000',
     fontSize: '16px',
     fontWeight: '400',
+    transition:'0.3s',
+    '&:hover':{
+      opacity:'0.7',
+
+    },
   },
 }));
 
 export default useStyles;
+ 

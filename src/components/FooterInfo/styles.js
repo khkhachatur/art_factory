@@ -20,9 +20,9 @@ const useStyles = makeStyles((theme) => ({
     fontWeight:'700',
   },
   list:{
-    listStyleType: 'none',
+    listStyleType: 'none', 
     padding:'0',
-    fontSize:'14px',
+    fontSize:'14px', 
     fontWeight:'500',
     '&:last-child': {
       marginTop: '10px',

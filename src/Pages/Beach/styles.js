@@ -40,7 +40,7 @@ const useStyles = makeStyles((theme) => ({
     flexWrap: 'wrap',
     gap: '20px',
     marginBottom: '30px',
-  },
+  }, 
   events:{
     paddingTop:'80px'
   },

@@ -148,11 +148,10 @@ export const contactCard = [
   {
     id: 1,
     title: 'The Beach',
-    days: {
-      daysText1:'Mon-Sun',
-    },
     time: {
-      timeText1:'17:00-01:00',
+      timeText1:'Mon-Sun 17:00-01:00',
+      timeText2:'',
+      timeText3:'',
     },
     address: 'Ashtarak Highway 7 Yerevan, Armenia',
     floor: 'Art Factory 5th Floor',
@@ -169,8 +168,10 @@ export const contactCard = [
     id: 2,
     title: 'Latitude',
     time: {
-      timeText1:'Close',
-      timeText2:'14:00-19:00',
+      timeText1:'Mon-Wed Close',
+      timeText2:'Thu-Sun 14:00-19:00',
+      timeText3:'',
+
     },
     address: 'Ashtarak Highway 7 Yerevan, Armenia',
     floor: 'Art Factory 1th Floor',
@@ -187,8 +188,9 @@ export const contactCard = [
     id: 3,
     title: 'A1',
     time: {
-      timeText1:'Close',
-      timeText2:'11:00-20:00',
+      timeText1:'Mon Close',
+      timeText2:'Tue-Sun 11:00-20:00',
+      timeText3:'',
     },
     address: 'Abovyan street 1 Yerevan, Armenia',
     floor: 'Second Floor',

@@ -20,7 +20,7 @@ const Events = () => {
         <Title text="Events happening this week" />
         <div className={classNames.weekly}>
           {events.map(
-            (item) =>
+            (item) => 
               item.variant === 'weekly' && (
                 <EventCard
                   key={item.id}

@@ -25,7 +25,7 @@ const EventCard = ({ width, height, date, place, name, img }) => {
             style={{
               background: `url(${EventArrow}) center center/cover no-repeat`,
             }}
-            to="#"
+            to="/events-page"
           ></Link>
         </div>
       </div>

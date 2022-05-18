@@ -19,7 +19,6 @@ import ArtistImg_03 from '../../images/ArtistsPage/ArtistImg_03.png'
 
 import useStyles from './styles';
 import Footer from '../../components/Footer';
-import { Link } from '@material-ui/core';
 
 
 const ArtistPage = () => {
@@ -61,8 +60,8 @@ const ArtistPage = () => {
       <div className={classNames.articles}>
         <Title text="Articles" />
         <ul className={classNames.artList}>
-          <a className={classNames.artLink} href="https://www.theartnewspaper.com/interview/tess-jaray-interview" target='_blank'>https://www.theartnewspaper.com</a>
-          <a className={classNames.artLink} href="https://greatergood.berkeley.edu/article/item/why_we_make_art" target='_blank'>https://greatergood.berkeley.edu/article/item/why_we_make_art</a>
+          <a className={classNames.artLink} href="https://www.theartnewspaper.com/interview/tess-jaray-interview" rel="noreferrer" target='_blank'>https://www.theartnewspaper.com</a>
+          <a className={classNames.artLink} href="https://greatergood.berkeley.edu/article/item/why_we_make_art" rel="noreferrer" target='_blank'>https://greatergood.berkeley.edu/article/item/why_we_make_art</a>
         </ul>
       </div>
       <div className={classNames.collections}>

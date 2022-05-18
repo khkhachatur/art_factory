@@ -1,7 +1,5 @@
 import React from 'react';
 
-import { events } from '../../db/dataBase';
-
 import Title from '../../components/Title/Title';
 import ArtistGallery from '../../components/ArtistGallery/ArtistGallery';
 import Navigation from '../../components/Navigation/Navigation';

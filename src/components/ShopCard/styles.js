@@ -31,7 +31,7 @@ const useStyles = makeStyles((theme) => ({
     display:'flex',
   },
   name:{
-      margin: '0',
+      margin: '0', 
       textShadow: '0px 4px 4px #949494',
       fontWeight: '700',
       fontSize: '13px',

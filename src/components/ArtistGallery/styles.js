@@ -15,17 +15,21 @@ const useStyles = makeStyles((theme) => ({
 
   },
   artist:{
-    display: 'flex',
-    display:'flex',   
+    display: 'flex',   
     justifyContent: 'center',
     alignItems: 'center',
     gap:'15px',
   },
   discription:{
+    color:'#000000',
     listStyleType:'none',
-    display: 'block',
+    display: 'block', 
     padding:'0',
     margin:'0',
+    transition:'0.3s',
+    '&:hover':{
+      opacity:'0.7'
+    }
   },
   name:{
     fontSize:'18px',

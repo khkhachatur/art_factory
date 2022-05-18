@@ -26,7 +26,7 @@ function App() {
         <Route path="latitude" element={<Latitude />} />
         <Route path="events-page" element={<EventsPage />} />
         <Route path="artist-page" element={<ArtistPage />} />
-      </Routes>
+      </Routes> 
     </>
   );
 }

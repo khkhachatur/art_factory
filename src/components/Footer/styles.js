@@ -17,11 +17,11 @@ const useStyles = makeStyles((theme) => ({
   title:{
     fontSize:'14px',
     fontWeight:'700',
-  },
+  }, 
   list:{
     listStyleType: 'none',
     padding:'0',
-    fontSize:'14px',
+    fontSize:'14px', 
     fontWeight:'500',
     '&:last-child': {
       paddingTop:'10px',

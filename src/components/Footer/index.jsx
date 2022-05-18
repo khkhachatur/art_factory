@@ -11,7 +11,7 @@ const Footer = ({contactRef}) => {
   }
 
   return (
-    <div className={classNames.footerHolder}>
+    <div className={classNames.footerHolder}> 
       <footer className={classNames.footer}>
         <FooterInfo
           title='ART FACTORY ABOVYAN'

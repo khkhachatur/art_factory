@@ -74,7 +74,7 @@ const useStyles = makeStyles((theme) => ({
     gap: '20px',
     marginBottom: '80px',
   },
-  galleryList:{
+  galleryList:{ 
     listStyleType:'none',
     padding:'0',
     display: 'flex',

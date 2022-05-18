@@ -7,7 +7,6 @@ const useStyles = makeStyles((theme) => ({
     width: '100%',
     position: 'fixed',
     zIndex: '1000',
-    marginBottom:'0',
     top: '0',
     display: 'flex',
     borderBottom: '1px solid rgba(196, 196, 196, 0.7)',
@@ -59,3 +58,4 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 export default useStyles;
+ 

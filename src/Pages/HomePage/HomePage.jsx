@@ -26,7 +26,7 @@ const contactRef = useRef();
   const [openModal, setOpenModal] = useState(false)
 
   const classNames = useStyles();
-
+ 
   return (
     <div className={classNames.container}>
       <div className={classNames.section}>
@@ -47,22 +47,22 @@ const contactRef = useRef();
           <Title text={'What you can find in ArtFactory?'} />
           <div className={classNames.linksHolder}>
             <button className={classNames.linksBlock}>
-              <Link className={classNames.linksText} to="beach">
+              <Link className={classNames.linksText} to="/beach">
                 The Beach
               </Link>
             </button>
             <button className={classNames.linksBlock}>
-              <Link className={classNames.linksText} to="studios">
+              <Link className={classNames.linksText} to="/studios">
                 Studios
               </Link>
             </button>
             <button className={classNames.linksBlock}>
-              <Link className={classNames.linksText} to="latitude">
+              <Link className={classNames.linksText} to="/latitude">
                 Latitude
               </Link>
             </button>
             <button className={classNames.linksBlock}>
-              <Link className={classNames.linksText} to="abovyan">
+              <Link className={classNames.linksText} to="/">
                 A1
               </Link>
             </button>

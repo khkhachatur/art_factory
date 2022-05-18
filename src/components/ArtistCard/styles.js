@@ -6,7 +6,7 @@ const useStyles = makeStyles((theme) => ({
     display: 'flex',
     position: 'relative',
   },
-  descriptionContainer: {
+  descriptionContainer: { 
     position: 'absolute',
     bottom: '10px',
     left: '0',
@@ -16,7 +16,7 @@ const useStyles = makeStyles((theme) => ({
     display: 'flex',
     flexDirection: 'column',
     padding: '6px 12px',
-  },
+  }, 
   name:{
       margin: '0',
       textShadow: '0px 4px 4px #949494',

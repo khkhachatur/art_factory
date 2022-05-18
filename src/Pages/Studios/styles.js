@@ -36,7 +36,7 @@ const useStyles = makeStyles((theme) => ({
     background: '#ffffff',
     padding: '20px',
   },
-  button: {
+  button: { 
     padding: '17px 20px',
     cursor: 'pointer',
     outline: 'none',

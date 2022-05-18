@@ -22,7 +22,7 @@ const FooterInfo = ({title, tel, mail, adress,web,link, socialLink}) => {
             <li className={classNames.item}>{adress}</li>
             <li className={classNames.item}>{link}</li>
 
-          </ul>
+          </ul>  
           <h3 className={classNames.title}>SOCIAL MEDIA</h3>
           <ul className={classNames.listImg}>
           <li className={classNames.img}><img src={instagram} alt="icon" /></li>

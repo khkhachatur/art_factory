@@ -13,7 +13,7 @@ const Header = () => {
   const animateTo = {opacity: 1, y: 0}
 
   const [open, setOpen] = useState(false);
-
+  
   return (
     <div className={classNames.headerHolder}>
       <header className={classNames.header}>

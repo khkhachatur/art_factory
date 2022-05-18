@@ -25,7 +25,7 @@ const useStyles = makeStyles((theme) => ({
         fontWeight: '500',
       },
       subscribeDescription: {
-        fontSize: '20px',
+        fontSize: '20px', 
         fontWeight: '400',
       },
       subscribeButton: {

@@ -97,7 +97,7 @@ const EventsPage = () => {
         </div>
         
         <div className={classNames.buttonHolder}>
-          <SeeAllButton link="" />
+          <SeeAllButton link="/events" />
         </div>
       </div>
       <Footer/>
@@ -106,3 +106,4 @@ const EventsPage = () => {
 };
 
 export default EventsPage;
+ 

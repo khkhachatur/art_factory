@@ -32,7 +32,7 @@ const Studios = () => {
             <div className={classNames.buttonContainer}>
               <button className={classNames.button}>
                 <div className={classNames.aboutUsLink}>
-                Learn More
+                Learn More 
                 </div>
               </button>
             </div>

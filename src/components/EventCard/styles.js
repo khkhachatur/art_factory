@@ -16,7 +16,7 @@ const useStyles = makeStyles((theme) => ({
     background: '#ffffff',
     border: '1px solid rgba(0, 0, 0, 0.5)',
     display: 'flex',
-    flexDirection: 'column',
+    flexDirection: 'column', 
     alignItems: 'center',
     padding: '6px 12px',
   },

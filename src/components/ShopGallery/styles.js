@@ -25,7 +25,7 @@ const useStyles = makeStyles((theme) => ({
         padding:'0',
         margin:'0',
         gap:'5px',
-        display:'flex',
+        display:'flex', 
       },
     name:{
         textShadow: '0px 4px 4px #949494',

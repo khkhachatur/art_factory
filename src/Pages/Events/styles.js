@@ -22,7 +22,7 @@ const useStyles = makeStyles((theme) => ({
   },
   navText: {
     fontSize: '16px',
-    fontWeight: '400',
+    fontWeight: '400', 
   },
   weekly: {
     display: 'flex',

@@ -10,9 +10,8 @@ const useStyles = makeStyles((theme) => ({
         fontWeight: '700',
         fontSize: '24px'
     },
-    list:{
+    list:{ 
         listStyleType: 'none',
-        maxWidth: '125px',
         padding:'0'
     },
     item:{

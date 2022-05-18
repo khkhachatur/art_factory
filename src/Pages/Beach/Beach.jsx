@@ -103,7 +103,7 @@ const contactRef = useRef();
                 <h3 className={classNames.contactsTitle}>Contacts</h3>
                 <p className={classNames.contactsItem}>{contactCardInfo.tel}</p>
                 <p className={classNames.contactsItem}>Address: {contactCardInfo.address}</p>
-                {/* <p>{contactCardInfo.social.facebook}</p> */}
+                {/* <p>{contactCardInfo.social.facebook}</p> */} 
               </div>
               <div className={classNames.timeBlock}>
                 <h3 className={classNames.contactsTitle}>Working Hours</h3>
