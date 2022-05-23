@@ -67,7 +67,7 @@ const Header = () => {
               animate={animateTo} 
               transition ={{delay:'0.50'}} 
               className={classNames.link}>
-                <Link to='/beach' className={classNames.link}>The Beache</Link>
+                <Link to='/beach' className={classNames.link}>The Beach</Link>
             </motion.li>
           </ul>}
         </div>

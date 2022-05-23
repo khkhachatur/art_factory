@@ -133,6 +133,9 @@ const useStyles = makeStyles((theme) => ({
   buttonHolder:{
     paddingBottom:'80px'
   },
+  galleryStyle:{
+    
+  },
 
 }));
 

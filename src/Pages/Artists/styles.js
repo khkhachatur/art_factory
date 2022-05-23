@@ -15,6 +15,12 @@ const useStyles = makeStyles((theme) => ({
     width: '100%',
     padding: '80px 0',
   },
+  titleBox:{
+    display:'flex',
+    justifyContent:'space-between',
+    alignItems:'center',
+  },
+  
   buttonHolder:{
     padding:'0 0 80px 0'
   },

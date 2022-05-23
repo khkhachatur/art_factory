@@ -12,6 +12,7 @@ const useStyles = makeStyles((theme) => ({
       subscribeImageBlock: {
         width: '100%',
         height: '300px',
+        padding:'40px',
       },
       subscribeDescriptionBlock: {
         display: 'flex',

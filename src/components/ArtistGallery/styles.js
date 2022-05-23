@@ -4,16 +4,16 @@ const useStyles = makeStyles((theme) => ({
   artistImg:{
     borderRadius:'200px',
     width:'40%',
-    
     height:'50%',
   },
-  artistCard:{
+  artistCard: (props) => ({
+    width:props.width,
+    height:props.height,
     display:'flex',   
-    justifyContent: 'center',
+    justifyContent: 'space-between',
     alignItems: 'center',
     gap:'20px'
-
-  },
+  }),
   artist:{
     display: 'flex',   
     justifyContent: 'center',
@@ -47,7 +47,7 @@ const useStyles = makeStyles((theme) => ({
     listStyleType:'none',
     display: 'flex',
     padding:'0',
-    gap:'16px'
+    gap:'16px',
   },
   artistGalleryItem:{
     width:'100%',

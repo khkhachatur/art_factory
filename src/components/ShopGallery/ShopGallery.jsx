@@ -10,7 +10,6 @@ import useStyles from './styles';
   const ShopGallery = ({ creatorName, itemName, year, price, shopImg}) => {
 
   const classNames = useStyles();
-  const shopCardInfo = shopCard[0];
 
   return (
     <div className={classNames.holder}>
@@ -23,14 +22,17 @@ import useStyles from './styles';
               alt={item.title}
               loading="lazy"
             />
-            <div className={classNames.descriptionContainer}>
-              <p className={classNames.name}>{shopCardInfo.creatorName}</p>
-              <ul className={classNames.list}>
-                <p className={classNames.item}>{shopCardInfo.itemName}</p>
-                <p className={classNames.item}>{shopCardInfo.year}</p>
-              </ul>
-              <p className={classNames.price}>{shopCardInfo.price}</p>
-            </div>
+            {shopCard.map(
+              (item) => 
+              <div className={classNames.descriptionContainer}>
+                <p className={classNames.name}>{item.creatorName}</p>
+                <ul className={classNames.list}>
+                  <p className={classNames.item}>{item.itemName}</p>
+                  <p className={classNames.item}>{item.year}</p>
+                </ul>
+                <p className={classNames.price}>{item.price}</p>
+              </div>
+            )}
           </ImageListItem>
         ))}
       </ImageList>

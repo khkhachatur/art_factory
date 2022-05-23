@@ -6,8 +6,6 @@ import Title from '../../components/Title/Title';
 import EventCard from '../../components/EventCard/EventCard';
 import SeeAllButton from '../../components/SeeAllButton/SeeAllButton';
 
-
-import qr from '../../images/interface/QR.svg';
 import joinUs from '../../images/THE-BEACH/joinUs.png';
 import reserve from '../../images/THE-BEACH/op_02.png';
 import bigQR from '../../images/THE-BEACH/qr-code-big.png';
@@ -44,7 +42,7 @@ const contactRef = useRef();
           }}
         >
           <div className={classNames.qrSection}>
-            <img src={qr} alt="QR not found" />
+            <img className={classNames.qrBox} src={bigQR} alt="QR not found" />
             <p className={classNames.qrText}>Scan for the Menu</p>
           </div>     
         </div>
@@ -85,13 +83,6 @@ const contactRef = useRef();
             <li><img src={bf_3} alt="Img" /></li>
             <li><img src={bf_4} alt="Img" /></li>
           </ul>
-        </div>
-
-        <div className={classNames.menuContainer}>
-          <Title text="Menu" />
-          <div className={classNames.menuHolder}>
-            <img className={classNames.qrSize} src={bigQR} alt="Img Not Found" />
-          </div>
         </div>
 
         <div className={classNames.contactsContainer}>

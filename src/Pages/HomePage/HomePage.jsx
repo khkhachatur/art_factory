@@ -1,6 +1,6 @@
-import { useState } from 'react';
 import React, { useRef } from 'react';
 import { Link } from 'react-router-dom';
+// import {Map, InfoWindow, Marker, GoogleApiWrapper} from 'google-maps-react';
 
 import { events, contactCard, shopCard  } from '../../db/dataBase';
 
@@ -16,6 +16,7 @@ import MainImage from '../../images/hometop.jpg';
 import img from '../../images/subscribe-here.jpg';
 
 
+import { useState } from 'react';
 import useStyles from './styles';
 import Footer from '../../components/Footer';
 
@@ -139,9 +140,16 @@ const contactRef = useRef();
         
         </div>
         <div className={classNames.mapsection}>
-              <div className={classNames.mapitem}>
-                  
-                  {/* <p className={classNames.mapadress}>Vahagni Taghamas, Ashtarak Highway 7, 0021 Yerevan</p> */}
+              <div className={classNames.mapitem}>     
+                {/* <Map google={this.props.google} zoom={14}>
+                  <Marker onClick={this.onMarkerClick}
+                          name={'Current location'} />
+
+                  <InfoWindow onClose={this.onInfoWindowClose}>
+                      <div>
+                      </div>
+                  </InfoWindow>
+                </Map> */}
               </div>
         </div>
       </div>
@@ -164,3 +172,7 @@ const contactRef = useRef();
 };
 
 export default HomePage;
+
+// export default GoogleApiWrapper({
+//   apiKey: ("AIzaSyAnVv56ssukzAJVUPiJwiMHY2VDzfk7mMg")
+// })(HomePage)

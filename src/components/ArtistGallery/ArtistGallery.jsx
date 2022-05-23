@@ -8,8 +8,8 @@ import ArtisWork_3 from '../../images/ArtistsPage/ArtisWork_3.jpg'
 
 import useStyles from './styles';
 
-const ArtistGallery = ({ name, position, country, artistPic}) => {
-  const classNames = useStyles({});
+const ArtistGallery = ({ width, height, name, position, country, artistPic}) => {
+  const classNames = useStyles({width, height});
   return (
   <div className={classNames.artistCard}>
     <Link to='/artist-page'>

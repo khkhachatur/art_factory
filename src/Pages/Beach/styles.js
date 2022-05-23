@@ -25,14 +25,17 @@ const useStyles = makeStyles((theme) => ({
   
   qrSection:{
     position: 'absolute',
-    left: '20%',
-    top: '200px',
-    width: '100%',
+    left: '3%',
+    top: '30px',
   },
   qrText:{
+    display:'flex',
     color:'#ffffff',
     fontSize:'16px',
     fontWeight:'700'
+  },
+  qrBox:{
+    width:'20%'
   },
   monthly: {
     display: 'flex',
@@ -46,25 +49,13 @@ const useStyles = makeStyles((theme) => ({
   },
   galleryList:{
     listStyleType:'none',
-    padding:'80px 0 0 0',
+    padding:'80px  0',
     display: 'flex',
-  },
-  menuContainer:{
-    paddingTop: '80px',
-    width: '100%',
-  },
-  menuHolder:{
-    padding:'0 40px',
-    display: 'flex',
-    justifyContent: 'center',
-  },
-  qrSize:{
-    width:'20%',
   },
   contactSection: {
     width: '100%',
     margin: '0 auto',
-    marginTop: '80px',
+    marginTop: '40px',
     border: '1px solid #000000',
     display: 'grid',
     gridTemplateColumns: '1fr 1fr',
@@ -94,11 +85,13 @@ const useStyles = makeStyles((theme) => ({
   },
   opSection:{
     display:'flex',
-    justifyContent:'space-between'
+    justifyContent:'space-between',
   },
   opBlock:{
     display:'flex',
-    gap:'10px'
+    gap:'10px',
+    padding:'10px',
+    border: '1px solid rgba(0, 0, 0, 0.5)',   
   },
   opDescription:{
     display: 'flex',

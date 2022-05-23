@@ -128,7 +128,7 @@ export const shopCard =[
   },
   {
     id: 2,
-    creatorName: 'Gohar Sargsyan',
+    creatorName: 'Item 2222',
     itemName:'Untitled',
     year:'2009',
     price:'3000 $',
@@ -136,7 +136,7 @@ export const shopCard =[
   },
   {
     id: 3,
-    creatorName: 'Gohar Sargsyan',
+    creatorName: 'Item 444',
     itemName:'Untitled',
     year:'2009',
     price:'3000 $',

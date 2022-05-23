@@ -17,8 +17,8 @@ const useStyles = makeStyles((theme) => ({
     padding:'60px 50px'
   },
   close:{
-    display:'absolute',
-    left:'10px'
+    display:'flex',
+    justifyContent:'end'
   },
   title: {
     display:'flex',

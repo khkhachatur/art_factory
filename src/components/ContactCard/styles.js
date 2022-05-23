@@ -48,11 +48,11 @@ const useStyles = makeStyles((theme) => ({
         padding:'0'
     },
     socialImg:{
-        width:'80%',
+        width:'65%',
         height:'80%'
     },
     socialFacebookImg:{
-        width:'81%',
+        width:'70.5%',
         height:'82%'
     }
 }));

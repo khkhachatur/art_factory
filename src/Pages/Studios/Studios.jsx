@@ -3,12 +3,16 @@ import { Link } from 'react-router-dom';
 
 import classnames from 'classnames';
 
+import Modal from '../../components/Modal/Modal';
+import FormComponent from '../../components/email/email';
 import Title from '../../components/Title/Title';
 import Navigation from '../../components/Navigation/Navigation';
 import SeeAllButton from '../../components/SeeAllButton/SeeAllButton';
 
 import MainImage from '../../images/Studios/studios-top.jpg';
 
+
+import { useState } from 'react';
 import useStyles from './styles';
 import Footer from '../../components/Footer';
 import ArtistGallery from '../../components/ArtistGallery/ArtistGallery';
@@ -17,6 +21,7 @@ import ArtistGallery from '../../components/ArtistGallery/ArtistGallery';
 const Studios = () => {
   const classNames = useStyles();
   
+  const [openModal, setOpenModal] = useState(false)
 
   return (
     <div className={classNames.container}>
@@ -30,7 +35,7 @@ const Studios = () => {
         >
           <div className={classNames.buttonsContainer}>
             <div className={classNames.buttonContainer}>
-              <button className={classNames.button}>
+              <button onClick={() => setOpenModal(true)} className={classNames.button}>
                 <div className={classNames.aboutUsLink}>
                 Learn More 
                 </div>
@@ -45,6 +50,7 @@ const Studios = () => {
               </div>
           </div>
         </div>
+        <FormComponent/>
         
         <Title text={'Residents'} />
         <div className={classNames.event}>
@@ -73,6 +79,9 @@ const Studios = () => {
 
 
         </div>
+        <div className={classNames.modal}>
+        {openModal}     
+      </div>
       <Footer/>
     </div>
   );
