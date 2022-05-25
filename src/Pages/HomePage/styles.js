@@ -80,7 +80,7 @@ const useStyles = makeStyles((theme) => ({
     // },
   },
   linksText: {
-    fontSize: '36px',
+  fontSize: '36px',
     fontWeight: '400',
     textDecoration: 'none',
     color: '#000000',

@@ -5,15 +5,15 @@ import Navigation from '../../components/Navigation/Navigation';
 import SeeAllButton from '../../components/SeeAllButton/SeeAllButton';
 import ArtistGallery from '../../components/ArtistGallery/ArtistGallery';
 
-import { artists } from '../../db/dataBase';
+// import { artists } from '../../db/dataBase';
 
 import useStyles from './styles';
-import { useState } from 'react';
+// import { useState } from 'react';
 import Footer from '../../components/Footer';
 
 
 const Artists = () => {
-  const [searchTerm, setSearchTerm] = useState('')
+  // const [searchTerm, setSearchTerm] = useState('')
   const classNames = useStyles();
   return (
     <div className={classNames.container}>
@@ -24,9 +24,9 @@ const Artists = () => {
           <input 
             type="text" 
             placeholder="Search by name" 
-            onChange={(event) => {
-              setSearchTerm(event.target.value);
-            }} 
+            // onChange={(event) => {
+            //   setSearchTerm(event.target.value);
+            // }} 
             style={
               {opacity:'0.7',
               width:'350px',
@@ -35,7 +35,7 @@ const Artists = () => {
               fontWeight:'400'
           }}/>
         </div>
-        {artists.filter((val) => { 
+        {/* {artists.filter((val) => { 
           if (setSearchTerm === "")  {
             return val
           }else if (val.artistName.toLowerCase().includes(searchTerm.toLowerCase())){
@@ -49,7 +49,27 @@ const Artists = () => {
                 country={country}
               />
             );
-        })}
+        })} */}
+         <ArtistGallery
+          name='Vardan Hakobian'
+          position='Painter'
+          country='Armenia'
+          />
+         <ArtistGallery
+          name='Vardan Hakobian'
+          position='Painter'
+          country='Armenia'
+          />
+         <ArtistGallery
+          name='Vardan Hakobian'
+          position='Painter'
+          country='Armenia'
+          />
+         <ArtistGallery
+          name='Vardan Hakobian'
+          position='Painter'
+          country='Armenia'
+          />
       </div>
       <div className={classNames.buttonHolder}>
         <SeeAllButton link="" />  

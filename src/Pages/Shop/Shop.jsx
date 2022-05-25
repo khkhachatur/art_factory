@@ -1,18 +1,18 @@
 import React from 'react';
 
-import { shopCard  } from '../../db/dataBase';
+// import { shopCard  } from '../../db/dataBase';
 
 import Navigation from '../../components/Navigation/Navigation';
 import ShopGallery from '../../components/ShopGallery/ShopGallery';
 
-import { useState } from 'react';
+// import { useState } from 'react';
 import useStyles from './styles';
 import Footer from '../../components/Footer';
 
 
 const Shop = () => {
   
-  const [searchTerm, setSearchTerm] = useState('')
+  // const [searchTerm, setSearchTerm] = useState('')
 
   const classNames = useStyles();
 
@@ -26,9 +26,9 @@ const Shop = () => {
             <input 
               type="text" 
               placeholder="Search by name" 
-              onChange={(event) => {
-                setSearchTerm(event.target.value);
-              }} 
+              // onChange={(event) => {
+              //   setSearchTerm(event.target.value);
+              // }} 
               style={
                 {opacity:'0.7',
                 width:'350px',
@@ -39,7 +39,7 @@ const Shop = () => {
           </div>
         </div>
         <div className={classNames.shopSection}>
-        {shopCard.filter((val) => { 
+        {/* {shopCard.filter((val) => { 
           if (setSearchTerm === "")  {
             return val
           }else if (val.creatorName.toLowerCase().includes(searchTerm.toLowerCase())){
@@ -50,7 +50,7 @@ const Shop = () => {
               <ShopGallery
               />
             );
-        })}
+        })} */}
           <ShopGallery/>
         </div>
       </div>

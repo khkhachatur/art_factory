@@ -21,13 +21,13 @@ function App() {
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="shop" element={<Shop />} />
-        <Route path="BuyRequest" element={<BuyRequest />} />
         <Route path="beach" element={<Beach />} />
         <Route path="events" element={<Events />} />
         <Route path="studios" element={<Studios />} />
         <Route path="artists" element={<Artists />} />
         <Route path="latitude" element={<Latitude />} />
         <Route path="artwork" element={<ArtWorksPage />} />
+        <Route path="BuyRequest" element={<BuyRequest />} />
         <Route path="events-page" element={<EventsPage />} />
         <Route path="artist-page" element={<ArtistPage />} />
       </Routes> 

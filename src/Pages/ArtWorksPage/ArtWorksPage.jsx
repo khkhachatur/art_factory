@@ -18,8 +18,8 @@ import Footer from '../../components/Footer';
 
 const ArtWorksPage = () => {
   const classNames = useStyles();
-  return (
-    <div className={classNames.container}>
+      return (
+  <div className={classNames.container}>
       <div className={classNames.section}>
         <Navigation navTo="Events" navToTo="Artist Name" />
 

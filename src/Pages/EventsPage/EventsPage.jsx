@@ -54,8 +54,8 @@ const EventsPage = () => {
             {artists.map(
               (item) => 
                 <ArtistCard
-                  key={item.id}
-                  artistName={item.artistName}
+                key={item.id}
+                artistName={item.artistName}
                   position={item.position}
                   country={item.country}
                   DBimg = {item.artistImg}

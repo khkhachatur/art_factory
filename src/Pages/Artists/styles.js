@@ -20,7 +20,7 @@ const useStyles = makeStyles((theme) => ({
     justifyContent:'space-between',
     alignItems:'center',
   },
-  
+    
   buttonHolder:{
     padding:'0 0 80px 0'
   },

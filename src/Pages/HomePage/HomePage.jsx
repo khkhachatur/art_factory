@@ -22,8 +22,8 @@ import Footer from '../../components/Footer';
 
 
 const HomePage = () => {
-const contactRef = useRef();
-
+  const contactRef = useRef();
+  
 const [openModal, setOpenModal] = useState(false)
 
   const classNames = useStyles();

@@ -87,7 +87,7 @@ const Studios = () => {
       </div>
       <Footer/>
     </div>
-  );
+      );
 };
 
 export default Studios;
