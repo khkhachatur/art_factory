@@ -22,10 +22,13 @@ const useStyles = makeStyles((theme) => ({
         padding: '0 30px',
       },
       subscribeTitle: {
+        fontFamily: 'Montserrat',
+        fontStyle:'italic',
         fontSize: '24px',
         fontWeight: '500',
       },
       subscribeDescription: {
+        fontFamily: 'Montserrat',
         fontSize: '20px', 
         fontWeight: '400',
       },

@@ -18,12 +18,14 @@ const useStyles = makeStyles((theme) => ({
   title:{
     fontSize:'14px',
     fontWeight:'700',
+    fontFamily: 'Montserrat',
   },
   list:{
     listStyleType: 'none', 
     padding:'0',
     fontSize:'14px', 
     fontWeight:'500',
+    fontFamily: 'Montserrat',
     '&:last-child': {
       marginTop: '10px',
       color:'red'

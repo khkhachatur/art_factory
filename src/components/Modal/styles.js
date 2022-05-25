@@ -18,7 +18,10 @@ const useStyles = makeStyles((theme) => ({
   },
   close:{
     display:'flex',
-    justifyContent:'end'
+    justifyContent:'end',
+    '&:hover':{
+      cursor:'pointer'
+    },
   },
   title: {
     display:'flex',

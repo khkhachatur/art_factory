@@ -4,7 +4,6 @@ import { Link } from 'react-router-dom';
 import classnames from 'classnames';
 
 import Modal from '../../components/Modal/Modal';
-import FormComponent from '../../components/email/email';
 import Title from '../../components/Title/Title';
 import Navigation from '../../components/Navigation/Navigation';
 import SeeAllButton from '../../components/SeeAllButton/SeeAllButton';
@@ -50,8 +49,6 @@ const Studios = () => {
               </div>
           </div>
         </div>
-        <FormComponent/>
-        
         <Title text={'Residents'} />
         <div className={classNames.event}>
         <ArtistGallery
@@ -80,7 +77,13 @@ const Studios = () => {
 
         </div>
         <div className={classNames.modal}>
-        {openModal}     
+        {openModal && <Modal
+          closeModal={setOpenModal}
+          title='About Studuios'
+          text='Art Factory provides a multi-functional space and community to Yerevan-based creatives. 
+          We have a variety of studio spaces available to rent, all equipped with lighting, electricity, a wash closet and a shower. 
+          Our nine studios are home to artists at all stages of their careers, working across all mediums. '
+        />}     
       </div>
       <Footer/>
     </div>

@@ -43,17 +43,13 @@ const useStyles = makeStyles((theme) => ({
 
   },
   logo: {
-    padding: '23px',
     maxHeight: '70px',
     border: '1px solid rgba(196, 196, 196, 0.7)',
-    borderBottom: 'none',
     textAlign: 'center',
   },
-  logoText: {
-    fontSize: '20px',
-    fontWeight: '400',
+  logoImg: {
     margin: '0',
-    color:'#000000'
+    maxHeight:'69px'
   },
 }));
 

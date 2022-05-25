@@ -43,9 +43,6 @@ const useStyles = makeStyles((theme) => ({
     fontSize:'18px',
     fontWeight:'400',
   },
-  buttonHolder:{
-    paddingBottom:'80px'
-  },
   workHolder:{
     display:'grid',
     gridTemplateColumns:'1fr 1fr 1fr 1fr'
@@ -59,6 +56,7 @@ const useStyles = makeStyles((theme) => ({
   },
   buttonHolder:{
     display:'flex',
+    paddingBottom:'80px',
     justifyContent:'center',
     
   },

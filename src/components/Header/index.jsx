@@ -2,6 +2,8 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { Spin as Hamburger } from 'hamburger-react'
 
+import logo from '../../images/interface/A1_Black-01.jpg';
+
 import { useState } from 'react';
 import {motion} from 'framer-motion' 
 import useStyles from './styles';
@@ -18,7 +20,7 @@ const Header = () => {
     <div className={classNames.headerHolder}>
       <header className={classNames.header}>
         <div className={classNames.logo}>
-          <Link to='/' className={classNames.logoText}>AF</Link>
+          <Link to='/' ><img className={classNames.logoImg}src={logo} alt="logo" /></Link>
         </div>
         <div className={classNames.menuBurger}>
           <Hamburger 

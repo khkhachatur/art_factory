@@ -15,6 +15,7 @@ const useStyles = makeStyles((theme) => ({
         padding:'0'
     },
     item:{
+        fontFamily: 'Montserrat',
         fontSize: '16px',
         fontWeight: '400',
         lineHeight: '1px',
@@ -26,18 +27,22 @@ const useStyles = makeStyles((theme) => ({
     },
     contacts:{
         fontSize: '16px',
-        fontWeight: '700'
+        fontWeight: '700',
+        fontFamily: 'Montserrat',
     },
     contactItem:{
         fontSize: '16px',
         fontWeight: '400',
+        fontFamily: 'Montserrat',
     },
     mail:{
         fontSize: '16px',
-        fontWeight: '700'
+        fontWeight: '700',
+        fontFamily: 'Montserrat',
     },
     maillink:{
         color:'#000000',
+        fontFamily: 'Montserrat',
         fontSize: '16px',
         fontWeight: '400',
     },

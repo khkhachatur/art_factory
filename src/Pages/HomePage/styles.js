@@ -43,6 +43,7 @@ const useStyles = makeStyles((theme) => ({
   },
   aboutUsLink: {
     textDecoration: 'none',
+    fontFamily: 'Montserrat',
     fontSize: '24px',
     fontWeight: '600',
     color: '#000000',
@@ -84,6 +85,7 @@ const useStyles = makeStyles((theme) => ({
     textDecoration: 'none',
     color: '#000000',
   },
+  
   commingSoonSection: {
     paddingTop: '80px',
     width: '100%',

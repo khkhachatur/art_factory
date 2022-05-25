@@ -2,8 +2,6 @@ import React from 'react';
 import 'react-phone-number-input/style.css'
 import PhoneInput from 'react-phone-number-input'
 
-import classnames from 'classnames';
-
 import FormComponent from '../../components/email/email';
 import Title from '../../components/Title/Title';
 

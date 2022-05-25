@@ -33,6 +33,7 @@ const useStyles = makeStyles((theme) => ({
   name:{
       margin: '0', 
       textShadow: '0px 4px 4px #949494',
+      fontFamily: 'Montserrat',
       fontWeight: '700',
       fontSize: '13px',
       color:'#0C163D'
@@ -41,6 +42,7 @@ const useStyles = makeStyles((theme) => ({
     margin: '0',
     fontWeight: '600',
     fontSize: '12px',
+    fontFamily: 'Montserrat',
     color:'#0C163D',
   },
   price:{
@@ -49,6 +51,7 @@ const useStyles = makeStyles((theme) => ({
     fontSize: '12px',
     color:'#0C163D',
     position:'absolute',
+    fontFamily: 'Montserrat',
     right:'15px',
     bottom:'5px',
   }

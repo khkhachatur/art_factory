@@ -18,8 +18,8 @@ const useStyles = makeStyles((theme) => ({
     padding: '6px 12px',
   }, 
   name:{
-      margin: '0',
-      textShadow: '0px 4px 4px #949494',
+    margin: '0',
+    textShadow: '0px 4px 4px #949494',
       fontWeight: '600',
       fontSize: '12px',
       color:'#0C163D'
