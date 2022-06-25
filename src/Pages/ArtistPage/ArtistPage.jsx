@@ -5,6 +5,7 @@ import Navigation from '../../components/Navigation/Navigation';
 import SeeAllButton from '../../components/SeeAllButton/SeeAllButton';
 import ArtistGallery from '../../components/ArtistGallery/ArtistGallery';
 
+import Artist_1 from '../../images/latitude/Artist_02.jpg'
 import Work_01 from '../../images/ArtistsPage/Work_01.png'
 import Work_02 from '../../images/ArtistsPage/Work_02.png'
 import Work_03 from '../../images/ArtistsPage/Work_03.png'
@@ -17,6 +18,8 @@ import ArtistImg_01 from '../../images/ArtistsPage/ArtistImg_01.png'
 import ArtistImg_02 from '../../images/ArtistsPage/ArtistImg_02.png'
 import ArtistImg_03 from '../../images/ArtistsPage/ArtistImg_03.png'
 
+import { artists } from '../../db/dataBase';
+
 import useStyles from './styles';
 import Footer from '../../components/Footer';
 
@@ -28,40 +31,45 @@ const ArtistPage = () => {
       <div className={classNames.section}>
         <Navigation navTo="Events" navToTo="Artist Name" />
         <div className={classNames.topContainer}>
-          <ArtistGallery
-          name='Vardan Hakobian'
-          position='Painter'
-          country='Armenia'
-          />
+          <div className={classNames.artist}>
+            <img className={classNames.ArtistImg} src={Artist_1} alt="" />
+            <ul className={classNames.info}>
+              <li className={classNames.name}>{artists[0].artistName}</li>
+              <li className={classNames.position}>{artists[0].position}</li>
+              <li className={classNames.country}>{artists[0].country}</li>
+            </ul>
+            <ul className={classNames.contactList}>
+              <li className={classNames.contactItem}>Tel: {artists[0].tel}</li>
+              <li className={classNames.contactItem}>Mail: {artists[0].mail}</li>
+            </ul>
+          </div>
         </div>
       <div className={classNames.discription}>
         <ul className={classNames.discriptionText}>
           <Title text="Biography" style={{margin:'0'}}/>
-          <p className={classNames.discriptionSubText} style={{margin:'red'}}>Art is that power which helps me keep dreaming and never give up. All my life, as I remember myself, I preferred drawing to all other activities. At first I studied at an art school, then at a lyceum at the Academy of Arts. In 2009, I graduated from the Academy of Fine Arts with a degree in architecture. The knowledge gained helped me broaden my horizons. As an architect, I was lucky to take part in the archaeological expeditions of the Hermitage on ancient and medieval monuments.</p>
+          <p className={classNames.discriptionSubText} style={{margin:'red'}}>{artists[0].biography}</p>
           <Title text="Education" />
           <ul className={classNames.discriptionList}>
-            <li><p className={classNames.discriptionSubText}>Yerevan Art Institute 2000-2006</p></li>
-            <li><p className={classNames.discriptionSubText}>Royal Collage of Art, England 2006-2008</p></li>
+            <li><p className={classNames.discriptionSubText}>{artists[0].education.education1}</p></li>
+            <li><p className={classNames.discriptionSubText}>{artists[0].education.education2}</p></li>
           </ul>
           <Title text="Exhibitions" />
           <ul className={classNames.discriptionList}>
-            <li><p className={classNames.discriptionSubText_02}>March 2010 'Spring Fever', exhibition of emerging artists. Hyatt Regency - Yerevan, Armenia</p></li>
-            <li><p className={classNames.discriptionSubText_02}>March 2014 'Spring Fever', exhibition of emerging artists from Saatchi Art. Hyatt Regency London - The Churchill, London, UK</p></li>
+            <li><p className={classNames.discriptionSubText_02}>{artists[0].exhibitions.exhibitions1}</p></li>
+            <li><p className={classNames.discriptionSubText_02}>{artists[0].exhibitions.exhibitions2}</p></li>
           </ul>
         </ul>
-        {/* <div classNames={classNames.imgHolder}> */}
           <div className={classNames.discriptionImages}>
             <img className={classNames.descrImg} src={ArtistImg_01} alt="IMG Not Found" />
             <img className={classNames.descrImg} src={ArtistImg_03} alt="IMG Not Found" />
             <img className={classNames.descrImg} src={ArtistImg_02} alt="IMG Not Found" />
-          {/* </div> */}
-        </div>
+          </div>
       </div>  
       <div className={classNames.articles}>
         <Title text="Articles" />
         <ul className={classNames.artList}>
-          <a className={classNames.artLink} href="https://www.theartnewspaper.com/interview/tess-jaray-interview" rel="noreferrer" target='_blank'>https://www.theartnewspaper.com</a>
-          <a className={classNames.artLink} href="https://greatergood.berkeley.edu/article/item/why_we_make_art" rel="noreferrer" target='_blank'>https://greatergood.berkeley.edu/article/item/why_we_make_art</a>
+          <a className={classNames.artLink} href={artists[0].articles.articles1} rel="noreferrer" target='_blank'>{artists[0].articles.articles1}</a>
+          <a className={classNames.artLink} href={artists[0].articles.articles2} rel="noreferrer" target='_blank'>{artists[0].articles.articles2}</a>
         </ul>
       </div>
       <div className={classNames.collections}>

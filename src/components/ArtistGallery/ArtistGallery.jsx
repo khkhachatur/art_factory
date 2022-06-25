@@ -8,7 +8,7 @@ import ArtisWork_3 from '../../images/ArtistsPage/ArtisWork_3.jpg'
 
 import useStyles from './styles';
 
-const ArtistGallery = ({ width, height, name, position, country, artistPic}) => {
+const ArtistGallery = ({ width, height, artistName, position, country}) => {
   const classNames = useStyles({width, height});
   return (
   <div className={classNames.artistCard}>
@@ -16,7 +16,7 @@ const ArtistGallery = ({ width, height, name, position, country, artistPic}) => 
       <div className={classNames.artist}>
         <img className={classNames.artistImg} src={Artist_1} alt="" />
         <ul className={classNames.discription}>
-          <li className={classNames.name}>{name}</li>
+          <li className={classNames.name}>{artistName}</li>
           <li className={classNames.position}>{position}</li>
           <li className={classNames.country}>{country}</li>
         </ul>

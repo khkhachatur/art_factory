@@ -10,7 +10,7 @@ import ShopCard from '../../components/ShopCard/ShopCard';
 import EventCard from '../../components/EventCard/EventCard';
 import ContactCard from '../../components/ContactCard/ContactCard';
 import SeeAllButton from '../../components/SeeAllButton/SeeAllButton';
-import DiscriptionBlock from '../../components/DiscriptionBlock/DiscriptionBlock';
+import DiscriptionBlockModal from '../../components/DiscriptionBlockModal/DiscriptionBlockModal';
 
 import MainImage from '../../images/hometop.jpg';
 import img from '../../images/subscribe-here.jpg';
@@ -112,7 +112,7 @@ const [openModal, setOpenModal] = useState(false)
           </div>
         </div>
         <div className={classNames.subscribe} ref={contactRef}>
-        <DiscriptionBlock
+        <DiscriptionBlockModal
             title='Know about our events and news first!'
             text='Don’t miss our  events including exhibitions, fashion shows, parties, workshops and educational programs!'
             buttonText='Subscribe'
@@ -153,8 +153,9 @@ const [openModal, setOpenModal] = useState(false)
               </div>
         </div>
       </div>
-      <div className={classNames.modal}>
-        {openModal && <Modal 
+        {openModal && (
+          <div className={classNames.modal}>
+          <Modal 
                     closeModal={setOpenModal}
                     title='About ArtFactory'
                     text='Since its establishment in 2019, the Art Factory has grown into a multi-dimensional enclave full of art, food, functioning studio spaces, shopping, and entertainment. We are happy to provide artists a space to showcase their creativity to a community full of art-goers, pizza enthusiasts, and beach lovers alike. Our collective is located in a dreamy warehouse in Vahagny.
@@ -164,8 +165,9 @@ const [openModal, setOpenModal] = useState(false)
                     Venture to the rooftop to find The Beach, a tropical space with sand and breeze, panoramic mountain views, a fresh menu, and summer cocktails all year round.
                     
                     And in-between the first and top floor, Art Factory offers private spaces perfect for art/photography studios or creative office use.'
-                  />}
+                  />
       </div>
+                  )}
       <Footer contactRef={contactRef}/>
     </div>
   );

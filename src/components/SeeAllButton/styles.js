@@ -13,6 +13,7 @@ const useStyles = makeStyles((theme) => ({
     textDecoration: 'none',
     fontSize: '16px',
     fontWeight: '700',
+    fontFamily:'Inter',
     color: '#003566',
   },
 }));

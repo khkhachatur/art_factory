@@ -60,6 +60,62 @@ const useStyles = makeStyles((theme) => ({
     justifyContent:'center',
     
   },
+  modal:{
+    position: 'fixed',
+    top: '50%',
+    left: '50%',
+    transform: 'translate(-50%, -50%)',
+    width:'700px',
+    maxWidth:'100%',
+    background:'#ffffff', 
+    padding:'45px 40px'
+  },
+  modalSection:{
+    display:'grid',
+    gridTemplateColumns:'1fr 1fr',
+    gap:'30px'
+  },
+  modalList:{
+    listStyleType:'none',
+    padding:'0',
+    display:'flex',
+    flexDirection:'column',
+    gap:'20px'
+  },
+  title1:{
+    margin:'0',
+    fontFamily:'Inter',
+    fontWeight:'400',
+    fontSize:'14px'
+  },
+  text:{
+    fontFamily:'Montserrat',
+    fontWeight:'400',
+    fontSize:'18px'
+  },
+  input:{
+    width:'100%',
+    height:'60px',
+    border: '1px solid #949494',
+    borderRadius: '4px',
+  },
+  btn:{
+    background:'#0E1934',
+    border:'none',
+    color:'white',
+    fontFamily:'Inter',
+    fontSize:'16px',
+    fontWeight:'700',
+    padding:'15px 65px'
+  },
+  close:{
+    display:'flex',
+    justifyContent:'end',
+    '&:hover':{
+      cursor:'pointer'
+    },
+  },
+  
 
 }));
 

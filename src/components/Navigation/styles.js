@@ -9,6 +9,7 @@ const useStyles = makeStyles((theme) => ({
   navText: {
     color:'#000000',
     fontSize: '16px',
+    fontFamily:'Montserrat',
     fontWeight: '400',
     transition:'0.3s',
     '&:hover':{

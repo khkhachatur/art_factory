@@ -22,18 +22,109 @@ const useStyles = makeStyles((theme) => ({
     display: 'grid',
     gridTemplateColumns:'1fr 1fr',
     gap:'120px',
-
   },
-  topList:{
-    listStyleType:'none',
-    padding:'0',
-    margin:'0',
+  description:{
     display:'flex',
     flexDirection:'column',
     justifyContent:'center',
-    
+    gap:'30px'
+  },
+  dateTimeContainer:{
+    display:'flex',
+    gap:'20px'
+  },
+  dateTime:{
+    listStyleType:'none',
+    display:'flex',
+    flexDirection:'column',
+    padding:'0',
+    margin:'0'
+  },
+  strong:{
+    fontSize:'18px',
+    fontWeight:'600',
+    fontFamily:'Montserrat',
+  },
+  text:{
+    fontSize:'18px',
+    fontWeight:'400',
+    fontFamily:'Montserrat',
+  },
+  location:{
+    listStyleType:'none',
+    display:'flex',
+    padding:'0',
+    margin:'0',
+    gap:'20px'
+  },
+  contactSection: {
+    width: '100%',
+    margin: '0 auto',
+    marginTop: '40px',
+    border: '1px solid #000000',
+    display: 'grid',
+    gridTemplateColumns: '1fr 1fr',
+  },
+  left:{
+    display:'flex',
+    flexDirection:'column',
+    gap:'30px'
+  },
+  ImageBlock: {
+    width: '100%',
+    height: '300px',
+  },
+  DescriptionBlock:{
+    listStyleType:'none',
+    display:'flex',
+    flexDirection:'column',
+    gap:'10px',
+    padding:'0',
+    margin:'0'
+  },
+  timeBlock:{
+    listStyleType:'none',
+    display:'flex',
+    flexDirection:'column',
+    justifyContent:'center',
+    alignItems:'center',
+    gap:'10px',
+    padding:'0',
+    margin:'0'
+  },
+  sociallist:{
+    listStyleType:'none',
+    display:'flex',
+    gap:'12px',
+    padding:'0',
+    margin:'0',
+  
+  },
+  socialImg:{
+    width:'30px',
+  },
+  socialFacebookImg:{
+    width:'31px',
+  },
+  contactsBlock: {
+    display: 'flex',
+    justifyContent:'space-between',
+    gap:'30px',
+    padding:'20px 25px'
+  },
+  contactsTitle:{
+    fontSize:'18px',
+    fontWeight:'500',
+    paddingBottom:'20px',
+    margin:'0',
+  },
+  contactsItem:{
+    fontSize:'16px',
+    fontWeight:'400',
+    margin:'0',
   },
   aboutContainer:{
+    fontFamily:'Montserrat',
     paddingTop:'80px'
   }, 
   aboutText:{
@@ -48,14 +139,6 @@ const useStyles = makeStyles((theme) => ({
     display: 'grid',
     gap: '40px',
     gridTemplateColumns: '1fr 1fr 1fr 1fr 1fr'
-  },
-  contactSection: {
-    width: '100%',
-    margin: '0 auto',
-    marginTop: '80px',
-    border: '1px solid #000000',
-    display: 'grid',
-    gridTemplateColumns: '1fr 1fr',
   },
   weekly: {
     display: 'flex',

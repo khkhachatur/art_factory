@@ -3,7 +3,7 @@ import useStyles from './styles';
 
 import x from '../../images/interface/close-popups.svg';
 
-const Modal = ({ title, text, closeModal, buttonText }) => {
+const Modal = ({ title, text, closeModal }) => {
 
   const classNames = useStyles();
 
@@ -12,11 +12,10 @@ const Modal = ({ title, text, closeModal, buttonText }) => {
     <div className={classNames.modalBkg}>
       <div className={classNames.modalContainer}>
         <div className={classNames.close} onClick={() => closeModal(false)}>
+          <h3 className={classNames.title}>{title}</h3>
           <img src={x} alt="" />
         </div>
-        <h3 className={classNames.title}>{title}</h3>
         <p className={classNames.text}>{text}</p>
-        {/* <button>{buttonText}</button> */}
       </div>
     </div>
   );

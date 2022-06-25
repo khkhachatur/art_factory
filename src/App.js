@@ -6,10 +6,12 @@ import Events from './Pages/Events/Events';
 import Studios from './Pages/Studios/Studios';
 import Artists from './Pages/Artists/Artists';
 import HomePage from './Pages/HomePage/HomePage';
-import BuyRequest from './Pages/BuyRequest/BuyRequest';
 import Latitude from './Pages/Latitude/Latitude';
+import ApplyJob from './Pages/ApplyJob/ApplyJob';
+import ApplyForm from './Pages/ApplyForm/ApplyForm';
 import EventsPage from './Pages/EventsPage/EventsPage';
 import ArtistPage from './Pages/ArtistPage/ArtistPage';
+import YBAFReqiest from './Pages/YBAFReqiest/YBAFReqiest';
 import ArtWorksPage from './Pages/ArtWorksPage/ArtWorksPage';
 
 import { Routes, Route } from 'react-router-dom';
@@ -26,10 +28,12 @@ function App() {
         <Route path="studios" element={<Studios />} />
         <Route path="artists" element={<Artists />} />
         <Route path="latitude" element={<Latitude />} />
+        <Route path="apply-job" element={<ApplyJob />} />
+        <Route path="apply-form" element={<ApplyForm />} />
         <Route path="artwork" element={<ArtWorksPage />} />
-        <Route path="BuyRequest" element={<BuyRequest />} />
         <Route path="events-page" element={<EventsPage />} />
         <Route path="artist-page" element={<ArtistPage />} />
+        <Route path="ybaf-request" element={<YBAFReqiest />} />
       </Routes> 
     </>
   );

@@ -33,15 +33,18 @@ const useStyles = makeStyles((theme) => ({
   },
   name:{
     fontSize:'18px',
+    fontFamily:'Montserrat',
     fontWeight:'500'
   },
   position:{
-    fontSize:'14px',
-    fontWeight:'400'
+    fontSize:'16px',
+      fontFamily:'Montserrat',
+      fontWeight:'400'
   },
   country:{
     fontSize:'14px',
-    fontWeight:'300'
+      fontFamily:'Montserrat',
+      fontWeight:'300'
   },
   artistGallery:{
     listStyleType:'none',

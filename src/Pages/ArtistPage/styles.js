@@ -15,19 +15,59 @@ const useStyles = makeStyles((theme) => ({
     width: '100%',
     paddingTop: '70px',
   },
+  artist:{
+    display: 'grid', 
+    gridTemplateColumns:'1fr 3fr 1.1fr',  
+    alignItems: 'center',
+  },
+  ArtistImg:{
+    width:'200px',
+    height:'200px',
+    borderRadius:'100px'
+  },
+  info:{
+    listStyleType:'none',
+    padding:'0',
+    margin:'0'
+  },
+  name:{
+    fontFamily:'Montserrat',
+    fontWeight:'500',
+    fontSize:'18px'
+  },
+  position:{
+    fontFamily:'Montserrat',
+    fontWeight:'400',
+    fontSize:'16px'
+  },
+  country:{
+    fontFamily:'Montserrat',
+    fontWeight:'300',
+    fontSize:'14px'
+  },
+  contactList:{
+    display:'flex',
+    flexDirection:'column',
+    listStyleType:'none',
+    padding:'0',
+    margin:'0',
+    alignItems:'end'
+  },
+  contactItem:{
+    fontFamily:'Montserrat',
+    fontWeight:'400',
+    fontSize:'16px'
+  },
   discription:{
     display: 'grid',
     gap:'15px',
     gridTemplateColumns: '1fr 1fr',
     paddingTop:'60px'
   },
-  imgHolder:{
-    padding:'15px',
-    border: '1px solid rgba(0, 0, 0, 0.5)',
-  },
   discriptionImages:{
     position: 'relative',
     height: 'calc(95vh-80px)',
+    maxWidth:'100%',
   },
   descrImg: {
     '&:first-child': {
@@ -61,11 +101,13 @@ const useStyles = makeStyles((theme) => ({
   },
   discriptionSubText:{
     fontSize:'16px',
+    fontFamily:'Montserrat',
     fontWeight:'400',
   },
   discriptionSubText_02:{
     fontSize:'14px',
     fontWeight:'400',
+    fontFamily:'Open Sans'
   },
   articles:{
     paddingTop:'80px',
@@ -113,6 +155,7 @@ const useStyles = makeStyles((theme) => ({
   },
   title:{
     fontSize:'18px',
+    fontFamily:'Montserrat',
     fontWeight:'700',
     color: '#0C163D',
     textShadow: '0px 4px 4px rgba(0, 0, 0, 0.25)',
@@ -120,6 +163,7 @@ const useStyles = makeStyles((theme) => ({
   },
   year:{
     fontSize:'18px',
+    fontFamily:'Montserrat',
     fontWeight:'400',
     color: '#0C163D',
     margin:'0'

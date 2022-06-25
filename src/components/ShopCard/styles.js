@@ -17,6 +17,7 @@ const useStyles = makeStyles((theme) => ({
     left: '0',
     width: '100%',
     height: 'fit-content',
+    fontFamily:'Montserrat',
     background: 'rgba(241, 232, 232, 0.7)',
     display: 'flex',
     flexDirection: 'column',

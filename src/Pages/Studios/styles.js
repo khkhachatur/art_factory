@@ -59,11 +59,13 @@ const useStyles = makeStyles((theme) => ({
     textDecoration: 'none',
     fontSize: '24px',
     fontWeight: '600',
+    fontFamily:'Montserrat',
     color: '#000000',
   },
   aboutUsLinkPrimary:{
     color:'#ffffff',
     textDecoration: 'none',
+    fontFamily:'Montserrat',
     fontSize: '24px',
     fontWeight: '600',
   },

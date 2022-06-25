@@ -1,11 +1,15 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 import useStyles from './styles';
 
 const DiscriptionBlock = ({DBimg, title, text, buttonText}) => {
   const classNames = useStyles({ });
+
+
   return (
-    <div className={classNames.subscribeSection}>
+    <>
+      <div className={classNames.subscribeSection}>
           <img
             className={classNames.subscribeImageBlock}
             src={DBimg}
@@ -16,9 +20,11 @@ const DiscriptionBlock = ({DBimg, title, text, buttonText}) => {
             <p className={classNames.subscribeDescription}>
               {text}
             </p>
-            <button className={classNames.subscribeButton}>{buttonText}</button>
+            <Link to ='/ybaf-request'> <button className={classNames.subscribeButton}>{buttonText}</button> </Link>
           </div>
       </div>
+
+    </>
   );
 };
 

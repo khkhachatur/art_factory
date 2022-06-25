@@ -42,7 +42,7 @@ const Studios = () => {
             </div>
             <div className={classnames(classNames.buttonContainer, classNames.primaryButton)}>
               <button className={classnames(classNames.button, classNames.buttonPrimary)}>
-                <Link className={classNames.aboutUsLinkPrimary} to="aboutus">
+                <Link className={classNames.aboutUsLinkPrimary} to="/apply-form">
                   Rent a Studio
                 </Link>
               </button>

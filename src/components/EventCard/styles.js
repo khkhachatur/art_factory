@@ -21,6 +21,8 @@ const useStyles = makeStyles((theme) => ({
     padding: '6px 12px',
   },
   dateBlock: {
+    fontFamily: 'Montserrat',
+    fontStyle:'normal',
     width: '100%',
   },
   date: {
@@ -31,6 +33,7 @@ const useStyles = makeStyles((theme) => ({
   place: {
     fontSize: '12px',
     fontWeight: '400',
+    
   },
   nameBlock: {
     display: 'flex',

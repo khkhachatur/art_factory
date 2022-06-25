@@ -60,23 +60,63 @@ const useStyles = makeStyles((theme) => ({
     display: 'grid',
     gridTemplateColumns: '1fr 1fr',
   },
+  left:{
+    display:'flex',
+    flexDirection:'column',
+    gap:'30px'
+  },
   ImageBlock: {
     width: '100%',
     height: '300px',
   },
+  DescriptionBlock:{
+    listStyleType:'none',
+    display:'flex',
+    flexDirection:'column',
+    gap:'10px',
+    padding:'0',
+    margin:'0'
+  },
+  timeBlock:{
+    listStyleType:'none',
+    display:'flex',
+    flexDirection:'column',
+    justifyContent:'center',
+    alignItems:'center',
+    gap:'10px',
+    padding:'0',
+    margin:'0'
+  },
+  sociallist:{
+    listStyleType:'none',
+    display:'flex',
+    gap:'12px',
+    padding:'0',
+    margin:'0',
+  
+  },
+  socialImg:{
+    width:'30px',
+  },
+  socialFacebookImg:{
+    width:'31px',
+  },
   contactsBlock: {
     display: 'flex',
     justifyContent:'space-between',
-    padding: '0 80px 0 20px',
+    gap:'30px',
+    padding:'20px 25px'
   },
   contactsTitle:{
     fontSize:'18px',
     fontWeight:'500',
-    paddingBottom:'40px',
+    paddingBottom:'20px',
+    margin:'0',
   },
   contactsItem:{
     fontSize:'16px',
     fontWeight:'400',
+    margin:'0',
   },
 
   opContainer:{

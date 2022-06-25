@@ -8,6 +8,7 @@ const useStyles = makeStyles((theme) => ({
         border: '1px solid #000000',
         display: 'grid',
         gridTemplateColumns: '1fr 1fr',
+        fontFamily:'Montserrat'
       },
       subscribeImageBlock: {
         width: '100%',
@@ -45,7 +46,20 @@ const useStyles = makeStyles((theme) => ({
           opacity: '0.9',
         }
     },
+    
+    modal:{
+      position: 'fixed',
+      top: '50%',
+      left: '50%',
+      transform: 'translate(-50%, -50%)',
+      maxWidth:'100%',
+      background:'#ffffff', 
+      padding:'45px 90px'
+    },
     title:{
+      display:'flex',
+      margin:'0',
+      justifyContent:'center',
       fontSize:'20px',
       fontWeight:'600',
       fontFamily:'Montserrat'
@@ -61,14 +75,20 @@ const useStyles = makeStyles((theme) => ({
       flexDirection:'column',
       listStyleType:'none',
       padding:'0',
-      gap:'9px'
+      gap:'15px'
     },
     gender:{
       display:'flex',
-      gridTemplateColumns:'1fr 1fr',
+      justifyContent:'space-between',
       listStyleType:'none',
-      padding:'0',
-      gap:'9px'
+      padding:'15px 0',
+    },
+    close:{
+      display:'grid',
+      gridTemplateColumns:'10fr 1fr',
+      '&:hover':{
+        cursor:'pointer'
+      },
     },
     input:{
       width:'300px',

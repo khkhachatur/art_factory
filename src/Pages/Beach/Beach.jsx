@@ -1,4 +1,5 @@
 import React, { useRef } from 'react';
+import { Link } from 'react-router-dom';
 
 import { contactCard, events } from '../../db/dataBase';
 
@@ -6,6 +7,9 @@ import Title from '../../components/Title/Title';
 import EventCard from '../../components/EventCard/EventCard';
 import SeeAllButton from '../../components/SeeAllButton/SeeAllButton';
 
+import youtube from '../../images/youtube1.svg'
+import facebook from '../../images/facebook1.svg'
+import instagram from '../../images/instagram1.svg'
 import joinUs from '../../images/THE-BEACH/joinUs.png';
 import reserve from '../../images/THE-BEACH/op_02.png';
 import bigQR from '../../images/THE-BEACH/qr-code-big.png';
@@ -90,16 +94,44 @@ const contactRef = useRef();
           <div className={classNames.contactSection}>
             <img className={classNames.ImageBlock} src={contacts} alt="subscribeImage"/>
             <div className={classNames.contactsBlock}>
-              <div className={classNames.DescriptionBlock}>
-                <h3 className={classNames.contactsTitle}>Contacts</h3>
-                <p className={classNames.contactsItem}>{contactCardInfo.tel}</p>
-                <p className={classNames.contactsItem}>Address: {contactCardInfo.address}</p>
-                {/* <p>{contactCardInfo.social.facebook}</p> */} 
+              <div className={classNames.left}>
+                <ul className={classNames.DescriptionBlock}>
+                  <li>
+                    <h3 className={classNames.contactsTitle}>Contacts</h3>
+                  </li>
+                  <li>
+                    <p className={classNames.contactsItem}>{contactCardInfo.tel}</p>
+                  </li>
+                  <li>
+                    <p className={classNames.contactsItem}>Mail: {contactCardInfo.email}</p>
+                  </li>
+                  <li>
+                    <p className={classNames.contactsItem}>Address: {contactCardInfo.address}</p>
+                  </li>
+                </ul>
+                <div className={classNames.contacts}>
+                  <p className={classNames.contactsTitle}>Social Media</p>
+                  <ul className={classNames.sociallist}>
+                    {
+                      <li><a href="www.instagram.com" target='_blank' rel="noreferrer"><img className={classNames.socialImg}  src={instagram} alt="" /></a></li>
+                    }  
+                    {
+                      <li><a href="www.facebook.com" target='_blank' rel="noreferrer"><img className={classNames.socialFacebookImg} src={facebook} alt="" /></a></li>
+                    }
+                    {
+                      <li><a href="www.youtube.com" target='_blank' rel="noreferrer"><img className={classNames.socialImg}  src={youtube} alt="" /></a></li>
+                    }
+                  </ul>
+                </div>
               </div>
-              <div className={classNames.timeBlock}>
-                <h3 className={classNames.contactsTitle}>Working Hours</h3>
-                <p className={classNames.contactsItem}>Mon-Sun  {contactCardInfo.time.timeText1}</p>
-              </div>
+              <ul className={classNames.timeBlock}>
+                <li>
+                  <h3 className={classNames.contactsTitle}>Working Hours</h3>
+                </li>
+                <li>
+                  <p className={classNames.contactsItem}>{contactCardInfo.time.timeText1}</p>
+                </li>
+              </ul>
             </div>
         </div>
       </div>
@@ -116,7 +148,7 @@ const contactRef = useRef();
                   <li className={classNames.opItem}>Manager</li>
                   <li className={classNames.opItem}>Cook</li>
                 </ul>
-                <button className={classNames.opButton}>Apply</button>
+                <Link to = '/apply-job'><button className={classNames.opButton}>Apply</button></Link>
               </div>
             </div>
             <div className={classNames.opBlock}>

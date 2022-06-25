@@ -12,9 +12,9 @@ import { BrowserRouter } from 'react-router-dom';
 
 ReactDOM.render(
   <ThemeProvider theme={theme}>
-    <CssBaseline />
+    <CssBaseline/>
     <BrowserRouter>
-      <App />
+      <App/>
     </BrowserRouter>
   </ThemeProvider>,
   document.getElementById('root')
