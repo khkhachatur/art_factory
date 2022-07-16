@@ -1,41 +1,78 @@
-import React, {useState} from 'react';
-
-// import { shopCard  } from '../../db/dataBase';
+import React, {useEffect, useState} from 'react';
 
 import Navigation from '../../components/Navigation/Navigation';
-import ShopGallery from '../../components/ShopGallery/ShopGallery';
 
-import smallFilter from '../../images/filterSmall.svg'
-import mediumFilter from '../../images/filterMedium.svg'
 import bigFilter from '../../images/filterBig.svg'
+import smallFilter from '../../images/filterSmall.svg'
+import filter from '../../images/shop-items/filter.png'
+import mediumFilter from '../../images/filterMedium.svg'
 
+import Chevron from 'react-chevron'
 import useStyles from './styles';
+import { shopCard  } from '../../db/dataBase';
 import Footer from '../../components/Footer';
-
+import ShopLayout from '../../components/ShopLayout';
+import FilterPanel from '../../components/PriceSlider/FilterPanel';
 
 const Shop = () => {
   
-  // const [searchTerm, setSearchTerm] = useState('')
-
-  const [open, setOpen] =useState(false)
-
   const classNames = useStyles();
 
-  const [state, setState] = useState("")
+  const [open, setOpen] =useState(false)
+  const [list, setList] = useState(shopCard)
+  const [searchTerm, setSearchTerm] = useState('')
+  const [selectedStyle, setSelectedStyle] = useState(null)
+  const [selectedPrice, setSelectedPrice] = useState([0,40000])
+  const [selectedCategory, setSelectedCategory] = useState(null)
 
+  const handleSelectCategory =(event, value) =>!value?null:setSelectedCategory(value)
+
+  const handleSelectStyle =(event, value) =>!value?null:setSelectedStyle(value)
+
+  const handleChangedPrice = (event, value) => setSelectedPrice(value);
+
+  const apllyFilters = () => {
+    let updatedList = shopCard;
+
+    if(selectedCategory){
+      updatedList=updatedList.filter((item) => item.category === selectedCategory.props.value)
+    }
+
+    if(selectedStyle){
+      updatedList=updatedList.filter((item) => item.style === selectedStyle.props.value)
+    }
+    
+    const minPrice = selectedPrice[0];
+    const maxPrice = selectedPrice[1];
+    
+    updatedList = updatedList.filter((item) => item.price >= minPrice && item.price <= maxPrice);
+    
+    setList(updatedList);
+  }
+  
+  useEffect(() => {
+    apllyFilters();
+  }, [selectedCategory, selectedPrice, selectedStyle])
+  
   return (
     <div className={classNames.container}>
       <div className={classNames.section}>
         <Navigation navTo="Shop" />
         <div className={classNames.filterSection}>
-          <button onClick={() => setOpen(true)} className={classNames.filter}>Filter</button>
+          <button onClick={() => setOpen(true)} className={classNames.filter}>
+            <div className={classNames.filerHolder}>
+              <img className={classNames.filterIcon} src={filter} alt="" />
+              <h3 className={classNames.filterTitile}>Filter</h3>
+              <div className={classNames.filterChevron}><Chevron direction='down'/></div>
+            </div>
+          </button>
           <div className={classNames.searchSection}>
             <input 
               type="text" 
               placeholder="Search by name" 
-              // onChange={(event) => {
-              //   setSearchTerm(event.target.value);
-              // }} 
+              onChange={(event) => {
+                setSearchTerm(event.target.value);
+              }} 
               style={
                 {opacity:'0.7',
                 width:'350px',
@@ -49,27 +86,6 @@ const Shop = () => {
             <div className={classNames.filterList}>
               <ul className={classNames.filterLeft}>
                 <li>
-                  <select className={classNames.sortBy} value = {state} onChange ={(e) => 
-                  {
-                    const selectedCategory = e.target.value
-                    setState(selectedCategory)
-                  }}>
-                    <option value = "category">category1</option>
-                    <option value = "category">category1</option>
-
-                  </select>
-                </li>
-                <li>
-                  <select className={classNames.sortBy} value = {state} onChange ={(e) => 
-                  {
-                    const selectedstyle = e.target.value
-                    setState(selectedstyle)
-                  }}>
-                    <option value = "style">Style1</option>
-                    <option value = "style">Style2</option>
-                </select>
-                </li>
-                <li>
                   <p className={classNames.option} >Size</p>
                   <ul className={classNames.size}>
                     <li className={classNames.sizeItem}><button className={classNames.sizeBtn}><img src={smallFilter} alt="" /></button></li>
@@ -79,42 +95,29 @@ const Shop = () => {
                 </li>
                 <li>
                   <ul className={classNames.Price}>
-                    <li><p className={classNames.option} >Price</p></li>
-                    <li><p className={classNames.optionPrimer} >0-40,000 USA</p></li>
+                    <FilterPanel 
+                      selectToggle={handleSelectCategory}
+                      selectedCategory={selectedCategory}
+                      selectedStyle={selectedStyle}
+                      selectStyle={handleSelectStyle}
+                      selectedPrice={selectedPrice}
+                      changedPrice={handleChangedPrice}
+                    />
                   </ul>
                 </li>
               </ul>
-              <select className={classNames.sortBy} value = {state} onChange ={(e) => 
-                {
-                  const selectedsortBy = e.target.value
-                  setState(selectedsortBy)
-                }}>
-                  <option value = "price">Price Low</option>
-                  <option value = "price">Price High</option>
-
-                </select>
             </div>
           )}
-        <div className={classNames.shopSection}>
-        {/* {shopCard.filter((val) => { 
-          if (setSearchTerm === "")  {
-            return val
-          }else if (val.creatorName.toLowerCase().includes(searchTerm.toLowerCase())){
-            return val
-          }
-        }).map(({}) => {
-            return(
-              <ShopGallery
-              />
-            );
-        })} */}
-          <ShopGallery/>
+        <div style={{padding:'40px 0'}}>
+          <ShopLayout list={list}/>
+        
         </div>
       </div>
       <Footer/>
     </div>
   );
 };
+
 
 export default Shop;
  

@@ -108,6 +108,21 @@ export const artists = [
     position:'Artist',
     country:'Armenia',
     artistImg: artistImg_01,
+    tel:'+374 91 555 111',
+    mail:'Vard.hakobian@gmail.com',
+    biography:'Art is that power which helps me keep dreaming and never give up. All my life, as I remember myself, I preferred drawing to all other activities. At first I studied at an art school, then at a lyceum at the Academy of Arts. In 2009, I graduated from the Academy of Fine Arts with a degree in architecture. The knowledge gained helped me broaden my horizons. As an architect, I was lucky to take part in the archaeological expeditions of the Hermitage on ancient and medieval monuments.',
+    education:{
+      education1:'Yerevan Art Institute 2000-2006',
+      education2:'Royal Collage of Art, England 2006-2008'
+    },
+    exhibitions:{
+      exhibitions1:"March 2010 'Spring Fever', exhibition of emerging artists. Hyatt Regency - Yerevan, Armenia",
+      exhibitions2:"March 2014 'Spring Fever', exhibition of emerging artists from Saatchi Art. Hyatt Regency London - The Churchill, London, UK"
+    },
+    articles:{
+      articles1:'https://www.theartnewspaper.com/interview/tess-jaray-interview',
+      articles2:'https://greatergood.berkeley.edu/article/item/why_we_make_art'
+    },
   },
   {
     id: 3,
@@ -115,6 +130,21 @@ export const artists = [
     position:'Artist',
     country:'Armenia',
     artistImg: '',
+    tel:'+374 91 555 111',
+    mail:'Vard.hakobian@gmail.com',
+    biography:'Art is that power which helps me keep dreaming and never give up. All my life, as I remember myself, I preferred drawing to all other activities. At first I studied at an art school, then at a lyceum at the Academy of Arts. In 2009, I graduated from the Academy of Fine Arts with a degree in architecture. The knowledge gained helped me broaden my horizons. As an architect, I was lucky to take part in the archaeological expeditions of the Hermitage on ancient and medieval monuments.',
+    education:{
+      education1:'Yerevan Art Institute 2000-2006',
+      education2:'Royal Collage of Art, England 2006-2008'
+    },
+    exhibitions:{
+      exhibitions1:"March 2010 'Spring Fever', exhibition of emerging artists. Hyatt Regency - Yerevan, Armenia",
+      exhibitions2:"March 2014 'Spring Fever', exhibition of emerging artists from Saatchi Art. Hyatt Regency London - The Churchill, London, UK"
+    },
+    articles:{
+      articles1:'https://www.theartnewspaper.com/interview/tess-jaray-interview',
+      articles2:'https://greatergood.berkeley.edu/article/item/why_we_make_art'
+    },
   },
   {
     id: 4,
@@ -122,6 +152,21 @@ export const artists = [
     position:'Artist',
     country:'Armenia',
     artistImg: '',
+    tel:'+374 91 555 111',
+    mail:'Vard.hakobian@gmail.com',
+    biography:'Art is that power which helps me keep dreaming and never give up. All my life, as I remember myself, I preferred drawing to all other activities. At first I studied at an art school, then at a lyceum at the Academy of Arts. In 2009, I graduated from the Academy of Fine Arts with a degree in architecture. The knowledge gained helped me broaden my horizons. As an architect, I was lucky to take part in the archaeological expeditions of the Hermitage on ancient and medieval monuments.',
+    education:{
+      education1:'Yerevan Art Institute 2000-2006',
+      education2:'Royal Collage of Art, England 2006-2008'
+    },
+    exhibitions:{
+      exhibitions1:"March 2010 'Spring Fever', exhibition of emerging artists. Hyatt Regency - Yerevan, Armenia",
+      exhibitions2:"March 2014 'Spring Fever', exhibition of emerging artists from Saatchi Art. Hyatt Regency London - The Churchill, London, UK"
+    },
+    articles:{
+      articles1:'https://www.theartnewspaper.com/interview/tess-jaray-interview',
+      articles2:'https://greatergood.berkeley.edu/article/item/why_we_make_art'
+    },
   },
   {
     id: 5,
@@ -129,16 +174,69 @@ export const artists = [
     position:'Artist',
     country:'Armenia',
     artistImg: '',
+    tel:'+374 91 555 111',
+    mail:'Vard.hakobian@gmail.com',
+    biography:'Art is that power which helps me keep dreaming and never give up. All my life, as I remember myself, I preferred drawing to all other activities. At first I studied at an art school, then at a lyceum at the Academy of Arts. In 2009, I graduated from the Academy of Fine Arts with a degree in architecture. The knowledge gained helped me broaden my horizons. As an architect, I was lucky to take part in the archaeological expeditions of the Hermitage on ancient and medieval monuments.',
+    education:{
+      education1:'Yerevan Art Institute 2000-2006',
+      education2:'Royal Collage of Art, England 2006-2008'
+    },
+    exhibitions:{
+      exhibitions1:"March 2010 'Spring Fever', exhibition of emerging artists. Hyatt Regency - Yerevan, Armenia",
+      exhibitions2:"March 2014 'Spring Fever', exhibition of emerging artists from Saatchi Art. Hyatt Regency London - The Churchill, London, UK"
+    },
+    articles:{
+      articles1:'https://www.theartnewspaper.com/interview/tess-jaray-interview',
+      articles2:'https://greatergood.berkeley.edu/article/item/why_we_make_art'
+    },
   },
 ];
 
+export const categoryList =[
+  {
+    id: 1,
+    value:'category1',
+    label:'Category 1'
+  },
+  {
+    id: 2,
+    value:'category2',
+    label:'Category 2'
+  },
+  {
+    id: 3,
+    value:'category3',
+    label:'Category 3'
+  },
+
+]
+export const styleList =[
+  {
+    id: 1,
+    value:'style1',
+    label:'Style 1'
+  },
+  {
+    id: 2,
+    value:'style2',
+    label:'Style 2'
+  },
+  {
+    id: 3,
+    value:'style3',
+    label:'Style 3'
+  },
+
+]
 export const shopCard =[
   {
     id: 1,
     creatorName: 'Gohar Sargsyan',
     itemName:'Untitled',
     year:'2009',
-    price:'3000 $',
+    price:'3000',
+    category:'category1',
+    style:'style1',
     itemImg: itemImg_01,
   },
   {
@@ -146,7 +244,9 @@ export const shopCard =[
     creatorName: 'Item 2222',
     itemName:'Untitled',
     year:'2009',
-    price:'3000 $',
+    price:'33000',
+    category:'category2',
+    style:'style2',
     itemImg: itemImg_02,
   },
   {
@@ -154,7 +254,9 @@ export const shopCard =[
     creatorName: 'Item 444',
     itemName:'Untitled',
     year:'2009',
-    price:'3000 $',
+    price:'13000',
+    category:'category3',
+    style:'style3',
     itemImg: itemImg_03,
   },
 ]

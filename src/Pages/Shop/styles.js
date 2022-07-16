@@ -1,4 +1,5 @@
 import { makeStyles } from '@material-ui/core/styles';
+import { padding } from '@mui/system';
 
 const useStyles = makeStyles((theme) => ({
   container: {
@@ -24,10 +25,29 @@ const useStyles = makeStyles((theme) => ({
     display:'flex',
     justifyContent:'space-between'
   },
+  filerHolder:{
+    display:"flex",
+    alignItems:"center",
+    gap:"10px",
+    padding:"7.5px 6px"
+  },
   filter:{
     background:'#ffffff',
     border:'1px solid rgba(196, 196, 196, 0.7)',
-    padding:'7.5px 15px'
+  },
+  filterTitile:{
+    fontFamily:"Inter",
+    fontWeight:'400',
+    fontSize:"16px",
+    margin:'0'
+  },
+  filterIcon:{
+    width:'16px',
+    height:'16px'
+  },
+  filterChevron:{
+    fontSize:'20px',
+    color:'#000'
   },
   filterList:{
     display:'flex',
@@ -43,33 +63,6 @@ const useStyles = makeStyles((theme) => ({
     gap:'35px',
     padding:'0',
     margin:'0'
-  },
-  option:{
-    fontFamily:'Open Sans',
-    fontSize:'20px',
-    fontWeight:'400'
-  },
-  sortBy:{
-    width:'185px',
-    height:'40px',
-    padding:'4px 8px',
-    fontFamily:'Open Sans',
-    fontSize:'20px',
-    fontWeight:'400',
-    border:'1px solid rgba(196, 196, 196, 0.7)',
-  },
-  Price:{
-    listStyleType:'none',
-    padding:'0',
-    margin:'0',
-    display:'flex',
-    gap:'20px'
-  },
-  optionPrimer:{
-    color:'rgba(0, 0, 0, 0.5)',
-    fontFamily:'Open Sans',
-    fontSize:'20px',
-    fontWeight:'400'
   },
   size:{
     listStyleType:'none',
@@ -89,6 +82,19 @@ const useStyles = makeStyles((theme) => ({
     display:'flex',
     alignItems:'end',
   },
+  photoList:{
+    width:'90%',
+    listStyleType:'none',
+    margin:'20px auto'
+  },
+  photo_item:{
+    display:'flex',
+    width:"300px",
+    margin:'20px 0'
+  }
+  
+
+  
 }));
 
 export default useStyles;

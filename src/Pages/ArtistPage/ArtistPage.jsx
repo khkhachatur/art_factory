@@ -3,7 +3,6 @@ import React from 'react';
 import Title from '../../components/Title/Title';
 import Navigation from '../../components/Navigation/Navigation';
 import SeeAllButton from '../../components/SeeAllButton/SeeAllButton';
-import ArtistGallery from '../../components/ArtistGallery/ArtistGallery';
 
 import Artist_1 from '../../images/latitude/Artist_02.jpg'
 import Work_01 from '../../images/ArtistsPage/Work_01.png'

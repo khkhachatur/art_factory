@@ -17,7 +17,7 @@ const ShopCard = ({ creatorName, itemName, year, price, shopImg}) => {
             <p className={classNames.item}>{itemName}</p>
             <p className={classNames.item}>{year}</p>
           </ul>
-          <p className={classNames.price}>{price}</p>
+          <p className={classNames.price}>{price} $</p>
         </div>
       </Link>
     </div>
