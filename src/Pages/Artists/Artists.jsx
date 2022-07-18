@@ -9,6 +9,7 @@ import ArtistGallery from '../../components/ArtistGallery/ArtistGallery';
 import { artists } from '../../db/dataBase';
 
 import useStyles from './styles';
+import ListOfPost from '../../components/ListOfPost';
 
 
 const Artists = () => {
@@ -34,6 +35,11 @@ const Artists = () => {
               fontWeight:'400'
           }}/>
         </div>
+
+        <div>
+          <ListOfPost/>
+        </div>
+
          {artists.filter((val) => { 
           if (setSearchTerm === "")  {
             return val

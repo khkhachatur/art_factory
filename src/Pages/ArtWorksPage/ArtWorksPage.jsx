@@ -1,9 +1,9 @@
-import React, {useState} from 'react';
+import React, {useState, useEffect} from 'react';
 
+import Chevron from 'react-chevron'
 import Title from '../../components/Title/Title';
 import Navigation from '../../components/Navigation/Navigation';
 import SeeAllButton from '../../components/SeeAllButton/SeeAllButton';
-import ArtistGallery from '../../components/ArtistGallery/ArtistGallery';
 
 import x from '../../images/interface/close-popups.svg';
 import Work_01 from '../../images/ArtistsPage/Work_01.png'
@@ -11,10 +11,68 @@ import Work_02 from '../../images/ArtistsPage/Work_02.png'
 import Work_03 from '../../images/ArtistsPage/Work_03.png'
 import Work_04 from '../../images/ArtistsPage/Work_04.png'
 
-import { artists } from '../../db/dataBase';
-
 import useStyles from './styles';
 import Footer from '../../components/Footer';
+
+const Thumbnail = ({arr, image, index}) =>{
+  
+  const classNames = useStyles();
+
+  return (
+    <div className={classNames.tumbnail}>
+      {arr.map((imgsrc, i) => (
+        <img 
+          key={i}
+          height='50'
+          src={imgsrc} 
+          onClick={() => image(i)}
+          className={index === i ? classNames.action : ''}
+          alt="" 
+        />
+      )
+      )}
+
+    </div>
+  )
+
+}
+
+const SlideShow =({ imgs }) =>{
+  const[index, setIndex] = useState(0)
+
+  useEffect(() => {
+    setIndex(0)
+  }, [])
+  
+  const next = () =>{
+    if(index === imgs.length - 1){
+      setIndex(0)
+    }else{
+      setIndex(index + 1)
+    }
+  }
+
+  const prev = () =>{
+    if(index === 0){
+      setIndex(imgs.length - 1)
+    }else{
+      setIndex(index - 1)
+    }
+  }
+  
+  const classNames = useStyles();
+
+  return <div className={classNames.slideShow}>
+    <div className={classNames.imgHolder}>
+      <img className={classNames.mainImg} src={imgs[index]} alt="" />
+    </div>
+    <div className={classNames.actions}>
+      <button className={classNames.actoinButtons} onClick={prev}><Chevron direction='left'/></button>
+      <button className={classNames.actoinButtons} onClick={next}><Chevron direction='right'/></button>
+    </div>
+    <Thumbnail arr={imgs} image={setIndex} index={index}/>
+  </div>
+}
 
 
 const ArtWorksPage = () => {
@@ -30,13 +88,39 @@ const [openModal, setOpenModal] = useState(false)
 
         <div className={classNames.topSection}>
           <div className={classNames.slider}>
+            <SlideShow
+              imgs={[
+                'https://images.unsplash.com/photo-1657493702739-4794de99558a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=688&q=80',
+                'https://images.unsplash.com/photo-1657804433404-c050efdd1144?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=764&q=80'
+              ]}
+            />
           </div>
           <ul className={classNames.list}>
-            <li className={classNames.title}>Name and Year</li>
-            <li className={classNames.item}>By Artist Name</li>
-            <li className={classNames.item}>Size</li>
-            <li className={classNames.item}>Material</li>
-            <li className={classNames.item}><strong>Price</strong></li>
+            <li>
+              <ul className={classNames.NameYear}>
+                <h2 className={classNames.title}>Artwork Name:</h2>
+                <h2 className={classNames.title}>2019</h2>
+              </ul>
+              <p className={classNames.item}>By Artist Name</p>
+            </li>
+            <li>
+              <ul className={classNames.NameYear}>
+                <ul className={classNames.infoList}>
+                  <li className={classNames.item}>Size:</li>
+                  <li className={classNames.item}>00x00</li>
+                </ul>
+                <ul className={classNames.infoList}>
+                  <li className={classNames.item}>Material:</li>
+                  <li className={classNames.item}>Oil on Canvas</li>
+                </ul>
+              </ul>
+            </li>
+            <li>
+              <ul className={classNames.infoList}>
+                <h2 className={classNames.item}>Price:</h2>
+                <h2 className={classNames.item}>4000 $</h2>
+              </ul>
+            </li>
             <li className={classNames.item}><button style={{padding:'13px 20px'}} className={classNames.btn} onClick={() => setOpenModal(true)}>Request to buy</button></li>
           </ul>
         </div> 
@@ -52,26 +136,6 @@ const [openModal, setOpenModal] = useState(false)
             <img className={classNames.workImg} src={Work_02} alt="Img Not Found" />
             <img className={classNames.workImg} src={Work_03} alt="Img Not Found" />
             <img className={classNames.workImg} src={Work_04} alt="Img Not Found" />
-          </div>
-          <div className={classNames.buttonHolder}>
-            <SeeAllButton link="" />
-          </div>
-        </div>
-        <div className={classNames.other}>
-          <Title text="Works of Other Artists" />
-          <div className={classNames.otherHolder}>
-            {artists.map(
-                (item) => 
-                  <ArtistGallery
-                    key={item.id}
-                    width="600px"
-                    artistName={item.artistName}
-                    position={item.position}
-                    country={item.country}
-                    DBimg = {item.artistImg}
-                  />
-            )
-            }
           </div>
           <div className={classNames.buttonHolder}>
             <SeeAllButton link="" />

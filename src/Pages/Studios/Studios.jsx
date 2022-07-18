@@ -10,9 +10,9 @@ import SeeAllButton from '../../components/SeeAllButton/SeeAllButton';
 
 import MainImage from '../../images/Studios/studios-top.jpg';
 
-
 import { useState } from 'react';
 import useStyles from './styles';
+import { artists } from '../../db/dataBase';
 import Footer from '../../components/Footer';
 import ArtistGallery from '../../components/ArtistGallery/ArtistGallery';
 
@@ -50,31 +50,19 @@ const Studios = () => {
           </div>
         </div>
         <Title text={'Residents'} />
-        <div className={classNames.event}>
-        <ArtistGallery
-        name='Vardan Hakobian'
-        position='Painter'
-        country='Armenia'
-        />
-        <ArtistGallery
-        name='Vardan Hakobian'
-        position='Painter'
-        country='Armenia'
-        />
-        <ArtistGallery
-        name='Vardan Hakobian'
-        position='Painter'
-        country='Armenia'
-        />
-        <ArtistGallery
-        name='Vardan Hakobian'
-        position='Painter'
-        country='Armenia'
-        />
-          <SeeAllButton link="/artists" />
+        <div>
+        {artists.slice(0,4).map(({id, artistName, position, country}) => {
+            return(
+              <ArtistGallery
+                key={id}
+                artistName={artistName}
+                position={position}
+                country={country}
+              />
+            );
+        })}
         </div>
-
-
+          <div className={classNames.buttonHolder}><SeeAllButton link="/artists" /></div>
         </div>
         <div className={classNames.modal}>
         {openModal && <Modal

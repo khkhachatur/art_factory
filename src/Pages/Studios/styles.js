@@ -74,7 +74,6 @@ const useStyles = makeStyles((theme) => ({
     flexDirection: 'row',
     flexWrap: 'wrap',
     gap: '20px',
-    marginBottom: '80px',
   },
   galleryList:{
     listStyleType:'none',
@@ -92,7 +91,12 @@ const useStyles = makeStyles((theme) => ({
     display: 'grid',
     gap: '40px',
     gridTemplateColumns: '1fr 1fr 1fr 1fr 1fr'
-  }
+  },
+  buttonHolder:{
+    display:'flex',
+    justifyContent:'center',
+    padding:'40px'
+  },
 }));
 
 export default useStyles;

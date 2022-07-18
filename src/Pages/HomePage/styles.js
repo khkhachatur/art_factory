@@ -14,7 +14,6 @@ const useStyles = makeStyles((theme) => ({
     height: '100%',
     width: '100%',
     paddingTop: '70px',
-
   },
   mainImage: {
     height: 'calc(95vh - 70px)',

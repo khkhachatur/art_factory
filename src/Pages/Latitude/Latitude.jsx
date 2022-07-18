@@ -85,7 +85,7 @@ const Latitude = () => {
         </div>
         <Title text={'YBAF Artists'} />
         <div className={classNames.artistsBlock}>
-        {artists.map(
+        {artists.slice(0,5).map(
             (item) => 
               <ArtistCard
                 key={item.id}
@@ -111,7 +111,7 @@ const Latitude = () => {
         </div>
         <Title text={'Past Events'} />
         <div className={classNames.pastEvents}>
-          {events.map(
+          {events.slice().map(
               (item) =>
                 item.variant === 'past' && (
                   <EventCard

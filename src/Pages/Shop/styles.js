@@ -1,5 +1,4 @@
 import { makeStyles } from '@material-ui/core/styles';
-import { padding } from '@mui/system';
 
 const useStyles = makeStyles((theme) => ({
   container: {
@@ -15,8 +14,6 @@ const useStyles = makeStyles((theme) => ({
     height: '100%',
     width: '100%',
     padding: '80px 0',
-  },
-  shopSection:{
   },
   buttonHolder:{
     padding:'0 0 80px 0'

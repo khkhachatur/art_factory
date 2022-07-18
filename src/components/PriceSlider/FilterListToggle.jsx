@@ -30,11 +30,11 @@ const FilterListToggle = ({ options, value, selectToggle}) => {
             className={classes.root}
             exclusive
         >
-            <Select className={classes.sortBy}  >
-                {options.map(({label, id, value}) => (
-                    <MenuItem key={id} value={value}>{label}</MenuItem>
-                    ))}
-            </Select>
+                <Select className={classes.sortBy}  >
+                    {options.map(({label, id, value}) => (
+                        <MenuItem key={id} value={value}>{label}</MenuItem>
+                        ))}
+                </Select>
         </ToggleButtonGroup>
     );
 }

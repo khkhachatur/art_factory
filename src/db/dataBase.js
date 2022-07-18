@@ -4,13 +4,27 @@ import artistImg_02 from '../images/latitude/Artist_02.jpg'
 import itemImg_01 from '../images/shop-items/shop-item1.jpg'
 import itemImg_02 from '../images/shop-items/shop-item2.jpg'
 import itemImg_03 from '../images/shop-items/shop-item3.jpg'
+
 export const events = [
   {
     id: 1,
     variant: 'weekly',
     date: 'Apr 30-04',
+    time:'14:00-20:00',
     place: 'Caligraphy Class, A1',
     name: 'Let there be light',
+    foundedBy:'Swiss Agency for Development and Cooperation (SDC),Embassy of Switzerland in Armenia',
+    about:{
+      about1:'The exhibition features conceptual installations and videos created by young artists made of plastic waste  highlighting environmental issues and raising public awareness.',
+      about2:'The project is funded by Swiss Agency for Development and Cooperation (SDC), Embassy of Switzerland in Armenia.'
+    },
+    partisipants:{
+      partisipent1:'name1',
+      partisipent2:'name2',
+      partisipent3:'name3',
+      partisipent4:'name4',
+      partisipent5:'name5'
+    },
     img: Image,
   },
   {
@@ -251,7 +265,37 @@ export const shopCard =[
   },
   {
     id: 3,
-    creatorName: 'Item 444',
+    creatorName: 'Item 333',
+    itemName:'Untitled',
+    year:'2009',
+    price:'13000',
+    category:'category3',
+    style:'style3',
+    itemImg: itemImg_03,
+  },
+  {
+    id: 4,
+    creatorName: '444',
+    itemName:'Untitled',
+    year:'2009',
+    price:'3000',
+    category:'category1',
+    style:'style1',
+    itemImg: itemImg_01,
+  },
+  {
+    id: 5,
+    creatorName: 'Item 55',
+    itemName:'Untitled',
+    year:'2009',
+    price:'33000',
+    category:'category2',
+    style:'style2',
+    itemImg: itemImg_02,
+  },
+  {
+    id: 6,
+    creatorName: 'Item 66',
     itemName:'Untitled',
     year:'2009',
     price:'13000',

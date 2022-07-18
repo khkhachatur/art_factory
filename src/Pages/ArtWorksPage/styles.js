@@ -17,12 +17,44 @@ const useStyles = makeStyles((theme) => ({
   },
   topSection:{
     display:'flex',
-    justifyContent:'space-between',
+    justifyContent:'space-between'
   },
   slider:{
-    width:'800px',
     maxWidth:'100%',
+  },
+  imgHolder:{
     border:'1px solid rgba(196, 196, 196, 0.7)'
+  },
+  slideShow:{
+    position:'relative',
+  },
+  tumbnail:{
+    display:'flex',
+    justifyContent:'center',
+    gap:'16px',
+    padding:'20px 50px'
+  },
+  action:{
+    border:'2px solid #000',
+    transform:"scale(1.3)",
+    transition:'all 300ms'
+  },
+  mainImg:{
+    transition:'500ms',
+    padding:"10px 15px"
+  },
+  actions:{
+    position:'absolute',
+    top:'50%',
+    width:'100%',
+    display:'flex',
+    justifyContent:'space-between'
+  },
+  actoinButtons:{
+    background:'none',
+    border:'none',
+    color:'#ffffff',
+    fontSize:'50px'
   },
   about:{
     padding:'80px 0',
@@ -34,14 +66,27 @@ const useStyles = makeStyles((theme) => ({
     display:'flex',
     flexDirection:'column',
     justifyContent:'center',
+    padding:'0',
+    gap:'20px',
   },
   title:{
     fontSize:'24px',
     fontWeight:'300',
+    margin:'0'
+  },
+  NameYear:{
+    padding:'0'
+  },
+  infoList:{
+    display:"flex",
+    gap:'10px',
+    padding:'0',
+    listStyleType:'none',
   },
   item:{
     fontSize:'18px',
     fontWeight:'400',
+    margin:'0'
   },
   workHolder:{
     display:'grid',

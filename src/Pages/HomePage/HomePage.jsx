@@ -76,7 +76,7 @@ const [openModal, setOpenModal] = useState(false)
         </div>
         <div className={classNames.commingSoonSection}>
           <Title text={'Comming soon in ArtFactory'} />
-          {events.map(
+          {events.slice(0).map(
           (item) =>
             item.variant === 'weekly' && (
               <EventCard
@@ -95,7 +95,7 @@ const [openModal, setOpenModal] = useState(false)
         <div className={classNames.shopContainer}>
           <Title text={'Shop'} />
           <div className={classNames.shopSection}>
-              {shopCard.map(
+              {shopCard.slice(0, 3).map(
               (item) =>
                   <ShopCard
                     key={item.id}

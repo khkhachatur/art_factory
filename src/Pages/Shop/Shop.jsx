@@ -29,6 +29,8 @@ const Shop = () => {
 
   const handleSelectStyle =(event, value) =>!value?null:setSelectedStyle(value)
 
+  const handleSearch =(event, value) => setSearchTerm(value)
+
   const handleChangedPrice = (event, value) => setSelectedPrice(value);
 
   const apllyFilters = () => {
@@ -38,6 +40,10 @@ const Shop = () => {
       updatedList=updatedList.filter((item) => item.category === selectedCategory.props.value)
     }
 
+    if(searchTerm){
+      updatedList=updatedList.filter((item) => item.creatorName.toLowerCase().includes(setSearchTerm.toLowerCase()))
+    }
+    
     if(selectedStyle){
       updatedList=updatedList.filter((item) => item.style === selectedStyle.props.value)
     }
@@ -52,7 +58,7 @@ const Shop = () => {
   
   useEffect(() => {
     apllyFilters();
-  }, [selectedCategory, selectedPrice, selectedStyle])
+  }, [selectedCategory, selectedPrice, selectedStyle, searchTerm])
   
   return (
     <div className={classNames.container}>
@@ -66,21 +72,6 @@ const Shop = () => {
               <div className={classNames.filterChevron}><Chevron direction='down'/></div>
             </div>
           </button>
-          <div className={classNames.searchSection}>
-            <input 
-              type="text" 
-              placeholder="Search by name" 
-              onChange={(event) => {
-                setSearchTerm(event.target.value);
-              }} 
-              style={
-                {opacity:'0.7',
-                width:'350px',
-                height:'40px', 
-                fontSize:'24px',
-                fontWeight:'400'
-            }}/>
-          </div>
         </div>
         {open && (
             <div className={classNames.filterList}>
@@ -99,6 +90,8 @@ const Shop = () => {
                       selectToggle={handleSelectCategory}
                       selectedCategory={selectedCategory}
                       selectedStyle={selectedStyle}
+                      searchToggle={handleSearch}
+                      searchTerm={searchTerm}
                       selectStyle={handleSelectStyle}
                       selectedPrice={selectedPrice}
                       changedPrice={handleChangedPrice}
@@ -110,7 +103,6 @@ const Shop = () => {
           )}
         <div style={{padding:'40px 0'}}>
           <ShopLayout list={list}/>
-        
         </div>
       </div>
       <Footer/>
