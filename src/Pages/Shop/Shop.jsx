@@ -21,6 +21,7 @@ const Shop = () => {
   const [list, setList] = useState(shopCard);
   const [searchTerm, setSearchTerm] = useState("");
   const [selectedStyle, setSelectedStyle] = useState(null);
+  const [selectedPrice_2, setSelectedPrice_2] = useState(null);
   const [selectedPrice, setSelectedPrice] = useState([0, 40000]);
   const [selectedCategory, setSelectedCategory] = useState(null);
 
@@ -33,6 +34,8 @@ const Shop = () => {
   const handleSearch = (event, value) => setSearchTerm(value);
 
   const handleChangedPrice = (event, value) => setSelectedPrice(value);
+
+  const handleSelectedPrice_2 = (event, value) => setSelectedPrice_2(value);
 
   const apllyFilters = () => {
     let updatedList = shopCard;
@@ -67,7 +70,13 @@ const Shop = () => {
 
   useEffect(() => {
     apllyFilters();
-  }, [selectedCategory, selectedPrice, selectedStyle, searchTerm]);
+  }, [
+    selectedCategory,
+    selectedPrice,
+    selectedStyle,
+    searchTerm,
+    selectedPrice_2,
+  ]);
 
   return (
     <div className={classNames.container}>
@@ -101,6 +110,8 @@ const Shop = () => {
                 selectedStyle={selectedStyle}
                 searchToggle={handleSearch}
                 searchTerm={searchTerm}
+                selectedPrice_2={selectedPrice_2}
+                selectePrice_2={handleSelectedPrice_2}
                 selectStyle={handleSelectStyle}
                 selectedPrice={selectedPrice}
                 changedPrice={handleChangedPrice}

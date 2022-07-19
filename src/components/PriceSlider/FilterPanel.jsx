@@ -4,7 +4,7 @@ import React from "react";
 import PriceSlider from "./PriceSlider";
 import FilterListToggle from "./FilterListToggle";
 import { makeStyles } from "@material-ui/core/styles";
-import { categoryList, styleList } from "../../db/dataBase";
+import { categoryList, styleList, priceList } from "../../db/dataBase";
 
 const useStyles = makeStyles((theme) => ({
   list: {
@@ -35,6 +35,8 @@ const FilterPanel = ({
   selectedPrice,
   searchToggle,
   search,
+  selectedPrice_2,
+  selectPrice_2,
 }) => {
   const classes = useStyles();
   return (
@@ -54,12 +56,20 @@ const FilterPanel = ({
         <FilterListToggle
           title="Style"
           options={styleList}
-          value={selectedStyle}
-          selectToggle={selectStyle}
+          value={selectedPrice_2}
+          selectToggle={selectPrice_2}
         />
       </div>
       <div>
         <PriceSlider value={selectedPrice} changedPrice={changedPrice} />
+      </div>
+      <div>
+        {/* <FilterListToggle
+          title="Style"
+          options={priceList}
+          value={selectedStyle}
+          selectToggle={selectStyle}
+        /> */}
       </div>
     </div>
   );

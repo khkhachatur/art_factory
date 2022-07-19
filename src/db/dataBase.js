@@ -254,6 +254,18 @@ export const categoryList = [
     label: "Category 3",
   },
 ];
+export const priceList = [
+  {
+    id: 1,
+    value: "pricelow",
+    label: "Price Low",
+  },
+  {
+    id: 2,
+    value: "pricehight",
+    label: "Price Hight",
+  },
+];
 export const styleList = [
   {
     id: 1,
@@ -281,6 +293,10 @@ export const shopCard = [
     category: "category1",
     style: "style1",
     itemImg: itemImg_01,
+    size: "22X30",
+    material: "Oil on Canvas",
+    about:
+      "Born in Baghdad and raised in Kuwait, Fahar is familiar with the reality of life in a society that is characterized by insecurity and homelessness. The search for protection and security play an essential role in the everyday life of people in the Middle East and thus became the central theme of his painting. Since 2009, Al-Salih has been creating works under the title “Shelter”, a series of images that has since been an essential part of his painterly work and an examination of his roots, but also a primeval human desire. Over the years, the series developed into a homage to art itself, to painting, which became his retreat and home.",
   },
   {
     id: 2,

@@ -12,15 +12,13 @@ import facebook from "../../images/facebook1.svg";
 import instagram from "../../images/instagram1.svg";
 import joinUs from "../../images/THE-BEACH/joinUs.png";
 import reserve from "../../images/THE-BEACH/op_02.png";
-import bigQR from "../../images/THE-BEACH/qr-code-big.png";
+import bigQR from "../../images/logos/ArtFactory.png";
 import bf_1 from "../../images/THE-BEACH/beach-food-1.jpg";
 import bf_2 from "../../images/THE-BEACH/beach-food-2.jpg";
 import bf_3 from "../../images/THE-BEACH/beach-food-3.jpg";
-import bf_4 from "../../images/THE-BEACH/beach-food-4.jpg";
 import b1 from "../../images/THE-BEACH/beach-gallery-1.jpg";
 import b2 from "../../images/THE-BEACH/beach-gallery-3.jpg";
 import b3 from "../../images/THE-BEACH/beach-gallery-1.jpg";
-import b4 from "../../images/THE-BEACH/beach-gallery-4.jpg";
 import MainImage from "../../images/THE-BEACH/beachtop.jpg";
 import contacts from "../../images/THE-BEACH/beach-contacts-img.jpg";
 

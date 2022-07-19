@@ -1,5 +1,6 @@
-import React from "react";
+import React, { useEffect } from "react";
 
+import { useParams } from "react-router-dom";
 import { events, artists, contactCard } from "../../db/dataBase";
 
 import Title from "../../components/Title/Title";
@@ -17,8 +18,28 @@ import contacts from "../../images/events/eventContact.png";
 import useStyles from "./styles";
 import Footer from "../../components/Footer";
 
-const EventsPage = () => {
+const EventsPage = ({ products }) => {
   const classNames = useStyles();
+  const { id } = useParams();
+
+  const {
+    id: productId,
+    variant,
+    date,
+    time,
+    place,
+    name,
+    foundedBy,
+    about,
+    about1,
+    about2,
+    partisipent1,
+    partisipent2,
+    partisipent3,
+    partisipent4,
+    partisipent5,
+    img,
+  } = products.find((item) => Number(item.id) === Number(id));
 
   const contactCardInfo = contactCard[1];
 
@@ -27,7 +48,7 @@ const EventsPage = () => {
       <div className={classNames.section}>
         <Navigation navTo="Events" navToTo="Event Name" />
         <div className={classNames.topContainer}>
-          <Title text="Event Name" />
+          <Title text={name} />
           <div className={classNames.topSection}>
             <img className={classNames.mainImg} src={evenyImg} alt="" />
             <div className={classNames.description}>
@@ -37,38 +58,25 @@ const EventsPage = () => {
                   <li className={classNames.strong}>Time:</li>
                 </ul>
                 <ul className={classNames.dateTime}>
-                  <li className={classNames.text}>02 October</li>
-                  <li className={classNames.text}>14:00-20:00</li>
+                  <li className={classNames.text}>{date}</li>
+                  <li className={classNames.text}>{time}</li>
                 </ul>
               </div>
               <ul className={classNames.location}>
                 <li className={classNames.strong}>Location:</li>
-                <li className={classNames.text}>Ashtarak Highway 7</li>
+                <li className={classNames.text}>{place}</li>
               </ul>
               <ul className={classNames.location}>
                 <li className={classNames.strong}>Founded By:</li>
-                <li className={classNames.text}>
-                  Swiss Agency for Development and Cooperation (SDC), Embassy of
-                  Switzerland in Armenia
-                </li>
+                <li className={classNames.text}>{foundedBy}</li>
               </ul>
             </div>
           </div>
         </div>
         <div className={classNames.aboutContainer}>
           <Title text="About" />
-          <p className={classNames.aboutText}>
-            The exhibition features conceptual installations and videos created
-            by young <br />
-            artists made of plastic waste highlighting environmental issues and
-            raising public <br />
-            awareness.
-            <br />
-            The project is funded by Swiss Agency for Development and
-            Cooperation (SDC),
-            <br />
-            Embassy of Switzerland in Armenia.
-          </p>
+          <p className={classNames.aboutText}>{about.about1}</p>
+          <p className={classNames.aboutText}>{about.about2}</p>
         </div>
 
         <div className={classNames.partContainer}>
@@ -193,6 +201,7 @@ const EventsPage = () => {
               item.variant === "monthly" && (
                 <EventCard
                   key={item.id}
+                  itemId={item.id}
                   width="580px"
                   height="330px"
                   date={item.date}

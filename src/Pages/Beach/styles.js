@@ -33,7 +33,7 @@ const useStyles = makeStyles((theme) => ({
     fontWeight: "700",
   },
   qrBox: {
-    width: "20%",
+    width: "40%",
   },
   monthly: {
     display: "flex",

@@ -6,13 +6,12 @@ import Navigation from "../../components/Navigation/Navigation";
 import SeeAllButton from "../../components/SeeAllButton/SeeAllButton";
 
 import x from "../../images/interface/close-popups.svg";
-import Work_01 from "../../images/ArtistsPage/Work_01.png";
-import Work_02 from "../../images/ArtistsPage/Work_02.png";
-import Work_03 from "../../images/ArtistsPage/Work_03.png";
-import Work_04 from "../../images/ArtistsPage/Work_04.png";
 
 import useStyles from "./styles";
 import Footer from "../../components/Footer";
+import { useParams } from "react-router-dom";
+import { shopCard } from "../../db/dataBase";
+import ShopCard from "../../components/ShopCard/ShopCard";
 
 const Thumbnail = ({ arr, image, index }) => {
   const classNames = useStyles();
@@ -76,8 +75,23 @@ const SlideShow = ({ imgs }) => {
   );
 };
 
-const ArtWorksPage = () => {
+const ArtWorksPage = ({ products }) => {
   const [openModal, setOpenModal] = useState(false);
+  const { id } = useParams();
+
+  const {
+    id: productId,
+    creatorName,
+    itemName,
+    size,
+    material,
+    year,
+    price,
+    about,
+    category,
+    style,
+    itemImg,
+  } = products.find((item) => Number(item.id) === Number(id));
 
   const classNames = useStyles();
   return (
@@ -98,27 +112,27 @@ const ArtWorksPage = () => {
             <ul className={classNames.list}>
               <li>
                 <ul className={classNames.NameYear}>
-                  <h2 className={classNames.title}>Artwork Name:</h2>
-                  <h2 className={classNames.title}>2019</h2>
+                  <h2 className={classNames.title}>Artwork Name: {itemName}</h2>
+                  <h2 className={classNames.title}>{year}</h2>
                 </ul>
-                <p className={classNames.item}>By Artist Name</p>
+                <p className={classNames.item}>By Artist Name: {creatorName}</p>
               </li>
               <li>
                 <ul className={classNames.NameYear}>
                   <ul className={classNames.infoList}>
                     <li className={classNames.item}>Size:</li>
-                    <li className={classNames.item}>00x00</li>
+                    <li className={classNames.item}>{size}</li>
                   </ul>
                   <ul className={classNames.infoList}>
                     <li className={classNames.item}>Material:</li>
-                    <li className={classNames.item}>Oil on Canvas</li>
+                    <li className={classNames.item}>{material}</li>
                   </ul>
                 </ul>
               </li>
               <li>
                 <ul className={classNames.infoList}>
                   <h2 className={classNames.item}>Price:</h2>
-                  <h2 className={classNames.item}>4000 $</h2>
+                  <h2 className={classNames.item}>{price} $</h2>
                 </ul>
               </li>
               <li className={classNames.item}>
@@ -133,45 +147,27 @@ const ArtWorksPage = () => {
             </ul>
           </div>
         </div>
-        <div className={classNames.about}>
+        <div>
           <Title text="About Artwork" />
-          <p className={classNames.aboutText}>
-            Born in Baghdad and raised in Kuwait, Fahar is familiar with the
-            reality of life in a society that is characterized by insecurity and
-            homelessness. The search for protection and security play an
-            essential role in the everyday life of people in the Middle East and
-            thus became the central theme of his painting. Since 2009, Al-Salih
-            has been creating works under the title “Shelter”, a series of
-            images that has since been an essential part of his painterly work
-            and an examination of his roots, but also a primeval human desire.
-            Over the years, the series developed into a homage to art itself, to
-            painting, which became his retreat and home.
-          </p>
+          <p>{about}</p>
         </div>
         <div className={classNames.works}>
-          <Title text="Other Works of Artist Name" />
-          <div style={{ display: "flex", justifyContent: "center" }}>
+          <div style={{ display: "flex", alignItems: "center", gap: "10px" }}>
+            <Title text="Other Works of" />
+            <p style={{ fontSize: "24px", fontWeight: "300" }}>{creatorName}</p>
+          </div>
+          <div>
             <div className={classNames.workHolder}>
-              <img
-                className={classNames.workImg}
-                src={Work_01}
-                alt="Img Not Found"
-              />
-              <img
-                className={classNames.workImg}
-                src={Work_02}
-                alt="Img Not Found"
-              />
-              <img
-                className={classNames.workImg}
-                src={Work_03}
-                alt="Img Not Found"
-              />
-              <img
-                className={classNames.workImg}
-                src={Work_04}
-                alt="Img Not Found"
-              />
+              {shopCard.slice(0, 4).map((item) => (
+                <ShopCard
+                  itemId={item.id}
+                  creatorName={item.creatorName}
+                  itemName={item.itemName}
+                  year={item.year}
+                  price={item.price}
+                  shopImg={item.itemImg}
+                />
+              ))}
             </div>
           </div>
           <div className={classNames.buttonHolder}>

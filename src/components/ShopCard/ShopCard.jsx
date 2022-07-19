@@ -1,16 +1,24 @@
+import React from "react";
+import useStyles from "./styles";
+import { Link } from "react-router-dom";
 
-import React from 'react';
-import useStyles from './styles';
-import { Link } from 'react-router-dom';
-
-const ShopCard = ({ creatorName, itemName, year, price, shopImg}) => {
+const ShopCard = ({
+  creatorName,
+  itemName,
+  year,
+  price,
+  shopImg,
+  itemId,
+  size,
+  material,
+}) => {
   const classNames = useStyles({});
   return (
     <div
       className={classNames.container}
       style={{ background: `url(${shopImg}) center center/cover no-repeat` }}
     >
-      <Link to='/artwork'>
+      <Link to={`/artwork/${itemId}`}>
         <div className={classNames.descriptionContainer}>
           <p className={classNames.name}>{creatorName}</p>
           <ul className={classNames.list}>
