@@ -1,15 +1,14 @@
-import React from 'react';
+import React from "react";
 
-import { events } from '../../db/dataBase';
+import { events } from "../../db/dataBase";
 
-import Title from '../../components/Title/Title';
-import EventCard from '../../components/EventCard/EventCard';
-import Navigation from '../../components/Navigation/Navigation';
-import SeeAllButton from '../../components/SeeAllButton/SeeAllButton';
+import Title from "../../components/Title/Title";
+import EventCard from "../../components/EventCard/EventCard";
+import Navigation from "../../components/Navigation/Navigation";
+import SeeAllButton from "../../components/SeeAllButton/SeeAllButton";
 
-import useStyles from './styles';
-import Footer from '../../components/Footer';
-
+import useStyles from "./styles";
+import Footer from "../../components/Footer";
 
 const Events = () => {
   const classNames = useStyles();
@@ -20,8 +19,8 @@ const Events = () => {
         <Title text="Events happening this week" />
         <div className={classNames.weekly}>
           {events.map(
-            (item) => 
-              item.variant === 'weekly' && (
+            (item) =>
+              item.variant === "weekly" && (
                 <EventCard
                   key={item.id}
                   width="700px"
@@ -38,7 +37,7 @@ const Events = () => {
         <div className={classNames.monthly}>
           {events.map(
             (item) =>
-              item.variant === 'monthly' && (
+              item.variant === "monthly" && (
                 <EventCard
                   key={item.id}
                   width="580px"
@@ -55,7 +54,7 @@ const Events = () => {
         <div className={classNames.monthly}>
           {events.map(
             (item) =>
-              item.variant === 'past' && (
+              item.variant === "past" && (
                 <EventCard
                   key={item.id}
                   width="380px"
@@ -68,11 +67,8 @@ const Events = () => {
               )
           )}
         </div>
-        <div className={classNames.buttonHolder}>
-          <SeeAllButton link="" />
-        </div>
       </div>
-      <Footer/>
+      <Footer />
     </div>
   );
 };

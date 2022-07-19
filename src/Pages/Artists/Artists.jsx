@@ -61,9 +61,6 @@ const Artists = () => {
             })}
         </div>
       </div>
-      <div className={classNames.buttonHolder}>
-        <SeeAllButton link="" />
-      </div>
       <Footer />
     </div>
   );
