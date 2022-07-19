@@ -1,76 +1,96 @@
-import { makeStyles } from '@material-ui/core/styles';
+import { makeStyles } from "@material-ui/core/styles";
 
 const useStyles = makeStyles((theme) => ({
   container: {
-    width: '100%',
-    height: '100%',
-    display: 'flex',
-    flexDirection: 'column',
-    justifyContent: 'center',
-    alignItems: 'center'
+    width: "100%",
+    height: "100%",
+    display: "flex",
+    flexDirection: "column",
+    justifyContent: "center",
+    alignItems: "center",
   },
   section: {
-    maxWidth: '1200px',
-    height: '100%',
-    width: '100%',
-    paddingBottom:'150px',
-    paddingTop: '70px',
+    maxWidth: "1200px",
+    height: "100%",
+    width: "100%",
+    paddingBottom: "150px",
+    paddingTop: "70px",
   },
-  mainInfo:{
-    display: 'grid',
-    gridTemplateColumns:'1fr 1fr',
-    gap:'170px',
+  mainInfo: {
+    display: "grid",
+    gridTemplateColumns: "1fr 1fr",
+    [theme.breakpoints.down("md")]: {
+      gridTemplateColumns: "1fr",
+      gap: "40px",
+    },
+    gap: "170px",
   },
-  list:{
-    listStyleType:'none',
-    padding:'0',
-    display:'flex',
-    flexDirection:'column'
+  mainImg: {
+    paddingTop: "70px",
+    [theme.breakpoints.down("sm")]: {
+      width: "650px",
+    },
+    [theme.breakpoints.down("xs")]: {
+      width: "500px",
+    },
+    [theme.breakpoints.down(550)]: {
+      width: "300px",
+    },
   },
-  discription:{
-    padding:'0',
-    
+  list: {
+    listStyleType: "none",
+    padding: "0",
+    [theme.breakpoints.down("md")]: {
+      justifyContent: "center",
+    },
+    display: "flex",
+    flexDirection: "column",
   },
-  input:{
-    width:'100%',
-    height:'60px',
-    borderRadius:'4px',
-    border: '1px solid #949494',
+  discription: {
+    padding: "0",
   },
-  workList:{
-    display:'grid',
-    gridTemplateColumns:'1fr 1fr 1fr 1fr',
-    listStyleType:'none',
-    padding:'0',
-    gap:'24px',
-    width:'80%'
+  input: {
+    width: "100%",
+    [theme.breakpoints.down("md")]: {
+      width: "300px",
+    },
+    height: "60px",
+    borderRadius: "4px",
+    border: "1px solid #949494",
   },
-  text:{
-    fontFamily:'Montserrat',
-    fontWeight:'400',
-    fontSize:'18px',
+  workList: {
+    display: "grid",
+    gridTemplateColumns: "1fr 1fr 1fr 1fr",
+    listStyleType: "none",
+    padding: "0",
+    gap: "24px",
+    width: "80%",
   },
-  img:{
-    display:'flex',
-    justifyContent:'center',
-    padding:'50px 90px',
-    cursor: 'pointer',
-    transition: 'all 0.3s',
-    '&:hover': {
-      transform: 'scale(1.01)',
-      opacity: '0.7',
+  text: {
+    fontFamily: "Montserrat",
+    fontWeight: "400",
+    fontSize: "18px",
   },
-},
-btn:{
-  color:'#ffffff',
-  background:'#0E1934',
-  padding:'15px 60px',
-  border:'none',
-  fontFamily: 'Inter',
-  fontWeight: '700',
-  fontSize: '16px',
-},
-
+  img: {
+    display: "flex",
+    justifyContent: "center",
+    padding: "50px 90px",
+    cursor: "pointer",
+    transition: "all 0.3s",
+    "&:hover": {
+      transform: "scale(1.01)",
+      opacity: "0.7",
+    },
+  },
+  btn: {
+    color: "#ffffff",
+    background: "#0E1934",
+    padding: "15px 60px",
+    border: "none",
+    fontFamily: "Inter",
+    fontWeight: "700",
+    fontSize: "16px",
+  },
 }));
 
 export default useStyles;

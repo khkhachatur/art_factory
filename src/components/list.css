@@ -1,1 +1,33 @@
-
+.listContainer {
+  width: 100%;
+  margin: 20px auto;
+}
+.listContainer .imageContainer {
+  columns: 3 250px;
+  gap: 15px;
+  width: 100%;
+}
+.shopCard {
+  display: flex;
+  flex-direction: column;
+}
+.descriptionSec {
+  font-family: Montserrat;
+  font-family: Montserrat;
+  font-weight: 700;
+  color: #0c163d;
+  font-size: 13px;
+  display: flex;
+  border: 1px solid rgba(241, 232, 232, 0.7);
+  background: rgba(241, 232, 232, 0.7);
+  border-top: none;
+  justify-content: space-between;
+}
+.listContainer .imageContainer img {
+  width: 100%;
+}
+.listStyle {
+  list-style-type: none;
+  padding: 2px 5px;
+  margin: 0;
+}

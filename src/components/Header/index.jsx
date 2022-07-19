@@ -25,10 +25,11 @@ const Header = () => {
         <div className={classNames.menuBurger}>
           <Hamburger 
             size={20}
-            onToggle={() => setOpen(!open)}
+            toggle={setOpen}
+            toggled={open}
           />    
         {open && 
-          <ul className={classNames.dropDown}>
+          <ul className={classNames.dropDown} onMouseLeave={() => setOpen(!open)}>
             <motion.li 
               initial={animateFrom} 
               animate={animateTo} 

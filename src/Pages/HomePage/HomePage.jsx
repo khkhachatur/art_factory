@@ -21,13 +21,14 @@ import useStyles from './styles';
 import Footer from '../../components/Footer';
 
 
+
 const HomePage = () => {
   const contactRef = useRef();
   
 const [openModal, setOpenModal] = useState(false)
 
   const classNames = useStyles();
- 
+
   return (
     <div className={classNames.container}>
       <div className={classNames.section}>

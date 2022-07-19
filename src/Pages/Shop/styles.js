@@ -1,98 +1,97 @@
-import { makeStyles } from '@material-ui/core/styles';
+import { makeStyles } from "@material-ui/core/styles";
 
 const useStyles = makeStyles((theme) => ({
   container: {
-    width: '100%',
-    height: '100%',
-    display: 'flex',
-    flexDirection: 'column',
-    justifyContent: 'center',
-    alignItems: 'center'
+    width: "100%",
+    height: "100%",
+    display: "flex",
+    flexDirection: "column",
+    justifyContent: "center",
+    alignItems: "center",
   },
   section: {
-    maxWidth: '1200px',
-    height: '100%',
-    width: '100%',
-    padding: '80px 0',
+    maxWidth: "1200px",
+    height: "100%",
+    width: "100%",
+    padding: "80px 0",
   },
-  buttonHolder:{
-    padding:'0 0 80px 0'
+  buttonHolder: {
+    padding: "0 0 80px 0",
   },
-  filterSection:{
-    display:'flex',
-    justifyContent:'space-between'
+  filterSection: {
+    display: "flex",
+    justifyContent: "space-between",
   },
-  filerHolder:{
-    display:"flex",
-    alignItems:"center",
-    gap:"10px",
-    padding:"7.5px 6px"
+  filerHolder: {
+    display: "flex",
+    alignItems: "center",
+    gap: "10px",
+    padding: "7.5px 6px",
   },
-  filter:{
-    background:'#ffffff',
-    border:'1px solid rgba(196, 196, 196, 0.7)',
+  filterList: {
+    display: "flex",
+    justifyContent: "center",
   },
-  filterTitile:{
-    fontFamily:"Inter",
-    fontWeight:'400',
-    fontSize:"16px",
-    margin:'0'
+  filter: {
+    background: "#ffffff",
+    border: "1px solid rgba(196, 196, 196, 0.7)",
   },
-  filterIcon:{
-    width:'16px',
-    height:'16px'
+  filterTitile: {
+    fontFamily: "Inter",
+    fontWeight: "400",
+    fontSize: "16px",
+    margin: "0",
   },
-  filterChevron:{
-    fontSize:'20px',
-    color:'#000'
+  filterIcon: {
+    width: "16px",
+    height: "16px",
   },
-  filterList:{
-    display:'flex',
-    justifyContent:'space-between',
-    padding:'0',
-    alignItems:'center',
-    margin:'0',
+  filterChevron: {
+    fontSize: "20px",
+    color: "#000",
   },
-  filterLeft:{
-    display:'flex',
-    listStyleType:'none',
-    alignItems:'center',
-    gap:'35px',
-    padding:'0',
-    margin:'0'
+  filterList: {
+    display: "flex",
+    justifyContent: "space-between",
+    padding: "0",
+    alignItems: "center",
+    margin: "0",
   },
-  size:{
-    listStyleType:'none',
-    padding:'0',
-    margin:'0',
-    display:'flex',
-    gap:'10px',
-
+  filterLeft: {
+    display: "flex",
+    listStyleType: "none",
+    alignItems: "center",
+    gap: "35px",
+    padding: "0",
+    margin: "0",
   },
-  sizeBtn:{
-    border:'none',
-    background:'none',
-    padding:'0',
-    alignSelf: 'flex-end'
+  size: {
+    listStyleType: "none",
+    padding: "0",
+    margin: "0",
+    display: "flex",
+    gap: "10px",
   },
-  sizeItem:{
-    display:'flex',
-    alignItems:'end',
+  sizeBtn: {
+    border: "none",
+    background: "none",
+    padding: "0",
+    alignSelf: "flex-end",
   },
-  photoList:{
-    width:'90%',
-    listStyleType:'none',
-    margin:'20px auto'
+  sizeItem: {
+    display: "flex",
+    alignItems: "end",
   },
-  photo_item:{
-    display:'flex',
-    width:"300px",
-    margin:'20px 0'
-  }
-  
-
-  
+  photoList: {
+    width: "90%",
+    listStyleType: "none",
+    margin: "20px auto",
+  },
+  photo_item: {
+    display: "flex",
+    width: "300px",
+    margin: "20px 0",
+  },
 }));
 
 export default useStyles;
- 
